@@ -25,7 +25,7 @@
 | 域1 | [01.4 JVM 内核与线上排查](01-java-core/01.4-jvm.md) | javaguide/java-jvm | ✅ |
 | 域1（计算机基础） | [01.5 计算机网络 · TCP/HTTP 深度](01-java-core/01.5-network-tcp.md) | xiaolincoding/tcp + http | ✅ |
 | 域2 后端技术组件工程化 | [02.1 MySQL 工程化](02-backend-components/02.1-mysql.md) | javaguide/mysql + 小林index/mvcc/索引失效/锁/日志/BufferPool | ✅ |
-| 域2 | [02.2 Redis 工程化](02-backend-components/02.2-redis.md) | javaguide/redis + 小林AOF/RDB/缓存三难题/主从/一致性 | ✅ |
+| 域2 | [02.2 Redis 工程化](02-backend-components/02.2-redis.md) | javaguide/redis 上+下 + 小林AOF/RDB/缓存三难题/主从/一致性/哨兵/Redlock/大Key | ✅ |
 | 域2 | [02.3 Spring & MyBatis 工程化](02-backend-components/02.3-spring-mybatis.md) | javaguide/system-design（Spring+MyBatis） | ✅ |
 | 域3 分布式与高可用架构 | [03.1 分布式理论与核心方案](03-distributed/03.1-distributed-theory.md) | javaguide/distributed-system | ✅ |
 | 域3 | [03.2 微服务架构工程化](03-distributed/03.2-microservices.md) | javaguide/microservices | ✅ |
@@ -63,4 +63,7 @@
   - 02.2 新增**模块八：主从复制与高可用**（全量三阶段/增量复制/双 Buffer/脑裂防护）、**模块九：数据库与缓存一致性工程方案**（四种顺序分析/Canal+MQ/选型矩阵）
   - 06.1 新增**模块五：RAG 全链路原理深度**（切割五级/两阶段 Re-rank/多路召回 RRF/Embedding 四代/向量库选型/幻觉四层防线/RAGAS 量化）
   - 07.1 新增**Ragent V2 架构深挖**（7 模块分层/v1-v2 演进/生产级特性/设计模式实战/扩展点）
-- **循环6 计划**：小林哨兵/Cluster/RedLock/大Key热Key；javaup 框架板块；javaguide Redis 面试题(下)/设计模式专题。
+- **循环6（已完成）**：新增抓取 4 篇（哨兵 / Redlock 分布式锁 / 大 Key 对持久化影响 / Redis 面试题下；javaguide 设计模式篇为 PDF 推广页、javaup 设计模式 hub 页 403，已记录换源）→ 五段式增量并入：
+  - 02.2 新增**模块十：哨兵与故障转移**（主客观下线/Leader 选举双条件/转移四步/quorum 规则）、**模块十一：分布式锁工业级方案**（七层加固/Redlock 与 fencing token 之争/Singleflight 与乐观锁替代）、**模块十二：大 Key 与热 Key 治理**（fork 两阶段阻塞/内存大页陷阱/UNLINK/发现手段矩阵）
+  - 02.2 模块一补充批量操作三选型、Redis 阻塞原因清单
+- **循环7 计划**：小林 Cluster 集群篇；设计模式换源（javaup 文章直链）；javaguide 计算机基础（网络/OS）补充。

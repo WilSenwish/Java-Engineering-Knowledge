@@ -63,7 +63,7 @@ Java-Engineering-Knowledge/
 |------|----------|----------|------|
 | javaguide.cn | ✅ 13/13 板块 | ✅ 13 篇（P0 8 + 并发中/下 + Spring + MyBatis + JVM垃圾回收 + Redis数据结构）+ 五段式加工（01.1~01.4、02.1~02.3、03.1~03.2） | 进行中（P1 待抓取） |
 | javaup.chat | ✅ 6 大板块 ~250 篇 | ✅ 2 篇（HashMap 深度 + ConcurrentHashMap 线程安全）+ 五段式加工（01.2/01.3） | 进行中 |
-| xiaolincoding.com | ✅ 图解网络/系统/MySQL/Redis + 24套面试题 | ✅ 12 篇（+BufferPool/主从复制/缓存一致性）+ 五段式加工（01.5/02.1/02.2） | 进行中 |
+| xiaolincoding.com | ✅ 图解网络/系统/MySQL/Redis + 24套面试题 | ✅ 15 篇（+哨兵/Redlock/大Key）+ 五段式加工（01.5/02.1/02.2） | 进行中 |
 | nageoffer.com | ✅ 5 个项目卡片 | ✅ Ragent V2 项目介绍 + 五项目五段式加工（07.1） | 进行中 |
 | xiaolinnote.com | ✅ Agent/RAG/LLM/AI编程 89 题 | ✅ 89 题 + 图解Agent目录 + RAG 万字图解，五段式加工（06.1 新增 RAG 深度模块） | 进行中 |
 
@@ -81,6 +81,7 @@ javaguide/
 ├── java-jvm/jvm-garbage-collection.md                 # JVM垃圾回收详解（算法/收集器/GC过程）
 ├── database-mysql/mysql-questions-01.md               # MySQL面试题总结
 ├── database-redis/redis-questions-01.md               # Redis面试题(上)
+├── database-redis/redis-questions-02.md               # Redis面试题(下)：事务/性能优化/生产问题/规范
 ├── database-redis/redis-data-structures-01.md         # Redis 5种基本数据类型详解
 ├── distributed-system/distributed-system-interview-questions.md  # 分布式面试题总结
 ├── distributed-system/microservices-interview-questions.md       # 微服务面试题总结
@@ -106,7 +107,10 @@ xiaolincoding/
 ├── redis/rdb-snapshot.md                              # RDB快照是怎么实现的（COW/混合持久化）
 ├── redis/cache-problems.md                            # 缓存雪崩、击穿、穿透
 ├── redis/master-slave-replication.md                  # 主从复制是怎么实现的（全量/增量/脑裂防护）
-└── redis/mysql-redis-consistency.md                   # 数据库和缓存如何保证一致性
+├── redis/mysql-redis-consistency.md                   # 数据库和缓存如何保证一致性
+├── redis/sentinel.md                                  # 为什么要有哨兵（主客观下线/选主/故障转移四步）
+├── redis/redlock-distributed-lock.md                  # Redis分布式锁高可用高性能（七层加固/Redlock争议）
+└── redis/bigkey-impact.md                             # 大Key对持久化的影响（fork两阶段阻塞/内存大页）
 
 nageoffer/
 ├── _index.md                                          # 5 个项目完整卡片（Ragent/oneThread/oneCoupon/12306/SaaS短链）
@@ -131,7 +135,7 @@ docs/
 │   └── 01.5-network-tcp.md                    # 计算机网络（3模块：TCP/可靠性/TCP与UDP/HTTP·HTTPS）
 ├── 02-backend-components/                     # 域2 后端技术组件工程化
 │   ├── 02.1-mysql.md                          # MySQL工程化（10模块：…/锁体系/三大日志/BufferPool深度）
-│   ├── 02.2-redis.md                          # Redis工程化（9模块：…/AOF/缓存三难题/RDB/主从复制/缓存一致性）
+│   ├── 02.2-redis.md                          # Redis工程化（12模块：…/RDB/主从复制/缓存一致性/哨兵/分布式锁/大Key治理）
 │   └── 02.3-spring-mybatis.md                 # Spring & MyBatis 工程化（5模块：IoC/AOP/事务/MVC/MyBatis）
 ├── 03-distributed/                            # 域3 分布式与高可用架构
 │   ├── 03.1-distributed-theory.md             # 分布式理论与核心方案（CAP/BASE、RPC、ID锁事务）
@@ -144,10 +148,10 @@ docs/
 └── 05-ops-observability/                      # 域5 待收集（ELK/Prometheus/SkyWalking）
 ```
 
-### 下一批抓取计划（循环6）
+### 下一批抓取计划（循环7）
 
 | 站点 | 待抓内容 |
 |------|----------|
-| xiaolincoding.com | 哨兵机制、Cluster 集群、RedLock 争议、大 Key/热 Key 治理 |
-| javaup.chat | 框架板块（Spring/MyBatis 深度，换非 hub 入口）；Synchronized 锁升级 |
-| javaguide.cn | Redis 面试题(下)、设计模式专题 |
+| xiaolincoding.com | Cluster 集群篇（16384 槽/Gossip/扩缩容） |
+| javaup.chat | 设计模式文章直链（hub 页 403，需从站内其他入口找） |
+| javaguide.cn | 计算机基础（计算机网络/操作系统）补充 |
