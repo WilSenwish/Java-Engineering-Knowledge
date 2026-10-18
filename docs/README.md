@@ -23,14 +23,14 @@
 | 域1 | [01.2 Java 集合工程化（含 HashMap/ConcurrentHashMap 深度）](01-java-core/01.2-collections.md) | javaguide/java-collection + javaup/hashmap + javaup/concurrenthashmap | ✅ |
 | 域1 | [01.3 Java 并发编程工程化](01-java-core/01.3-concurrency.md) | javaguide/java-concurrent 上+中+下 | ✅ |
 | 域1 | [01.4 JVM 内核与线上排查](01-java-core/01.4-jvm.md) | javaguide/java-jvm | ✅ |
-| 域1（计算机基础） | [01.5 计算机网络 · TCP/HTTP/I/O 多路复用](01-java-core/01.5-network-tcp.md) | xiaolincoding/tcp + http + IO多路复用 | ✅ |
-| 域1（计算机基础） | [01.6 操作系统基础与进程线程模型](01-java-core/01.6-os-fundamentals.md) | javaguide/cs-basics/os-questions-01 | ✅ |
+| 域1（计算机基础） | [01.5 计算机网络 · TCP/HTTP/I/O 多路复用/体系结构](01-java-core/01.5-network-tcp.md) | xiaolincoding/tcp + http + IO多路复用 + tcp可靠性 + 网络体系 | ✅ |
+| 域1（计算机基础） | [01.6 操作系统基础与进程线程模型](01-java-core/01.6-os-fundamentals.md) | javaguide/os-questions-01 + 小林虚拟内存 | ✅ |
 | 域2 后端技术组件工程化 | [02.1 MySQL 工程化](02-backend-components/02.1-mysql.md) | javaguide/mysql + 小林index/mvcc/索引失效/锁/日志/BufferPool/SQL执行链路 | ✅ |
-| 域2 | [02.2 Redis 工程化](02-backend-components/02.2-redis.md) | javaguide/redis 上+下 + 小林AOF/RDB/缓存三难题/主从/一致性/哨兵/Redlock/大Key/Cluster | ✅ |
+| 域2 | [02.2 Redis 工程化](02-backend-components/02.2-redis.md) | javaguide/redis 上+下 + 小林AOF/RDB/缓存三难题/主从/一致性/哨兵/Redlock/大Key/Cluster/过期淘汰 | ✅ |
 | 域2 | [02.3 Spring & MyBatis 工程化](02-backend-components/02.3-spring-mybatis.md) | javaguide/system-design（Spring+MyBatis） | ✅ |
 | 域3 分布式与高可用架构 | [03.1 分布式理论与核心方案](03-distributed/03.1-distributed-theory.md) | javaguide/distributed-system | ✅ |
 | 域3 | [03.2 微服务架构工程化](03-distributed/03.2-microservices.md) | javaguide/microservices | ✅ |
-| 域6 性能优化与架构演进 | [06.1 AI 前沿：Agent/RAG/LLM/AI编程](06-performance-ai/06.1-ai-frontier.md) | xiaolinnote 89题 + 图解Agent/RAG万字图解 | ✅ |
+| 域6 性能优化与架构演进 | [06.1 AI 前沿：Agent/RAG/LLM/AI编程](06-performance-ai/06.1-ai-frontier.md) | xiaolinnote 89题 + 图解Agent/RAG万字图解 + ReAct/Multi-Agent | ✅ |
 | 域7 业务场景与实战案例 | [07.1 实战项目案例库](07-business-cases/07.1-projects.md) | nageoffer 5项目 | ✅ |
 | 域4 工程交付与云原生 | — | 待收集（规划：CI/CD、Docker、K8s） | ⏳ |
 | 域5 生产运维与可观测性 | — | 待收集（规划：ELK、Prometheus、SkyWalking） | ⏳ |
@@ -72,4 +72,9 @@
   - 02.1 新增**模块十一：SQL 执行全链路**（连接器权限快照/查询缓存 8.0 移除真相/解析器与预处理器边界/优化器 CBO/执行器双指针模型/长连接内存治理/ICP 索引下推）
   - 01.5 新增**模块四：I/O 多路复用与高并发网络模型**（select/poll/epoll 演进/红黑树+就绪链表/LT vs ET/C10K/共享内存误区）
   - **新建 01.6 操作系统基础与进程线程模型**（用户态内核态三事件/系统调用 vs 上下文切换/进程线程 PCB-TCB/调度算法谱系/IPC/死锁四条件与检测）
-- **循环8 计划**：小林 OS 内存管理/文件系统、javaguide 网络面试题补充；nageoffer oneThread/oneCoupon 项目深挖；xiaolinnote 图解 Agent 专栏分篇。
+- **循环8（已完成）**：新增抓取 6 篇（TCP 重传/滑动窗口/拥塞控制 / 虚拟内存 / 过期删除与内存淘汰 / 网络面试题上 / ReAct / Multi-Agent）→ 五段式增量并入：
+  - 01.5 模块二深化为**可靠性机制全参数版**（RTO 公式/D-SACK 四判别/窗口三指针/四算法表/糊涂窗口/Nagle+延迟确认）；新增**模块五：网络体系结构与协议全景**（OSI vs TCP-IP/协议地图/输入网址七步/RSA vs ECDHE/HTTP vs RPC/Ping≠TCP 通）
+  - 01.6 新增**模块三：内存管理（虚拟内存与分页）**（分段 vs 分页对比/多级页表/TLB/Linux 布局/COW 与 OOM Killer/JVM AlwaysPreTouch）
+  - 02.2 新增**模块十四：过期删除与内存淘汰**（两机制分野表/惰性+定期实现细节/八策略/LRU vs LFU/logc 衰减增长）
+  - 06.1 新增**模块六：Agent 推理与协作模式**（ReAct 代码驱动本质/漂移与错误传播/Plan-and-Execute 动态重规划/大小模型混合降本 70-90%/Multi-Agent 三模式/上下文隔离即质量）
+- **循环9 计划**：域4 工程交付与云原生（Docker/K8s/CI-CD）+ 域5 生产运维与可观测性补白；nageoffer 剩余项目深挖（oneThread/牛券/Link）；javaguide 分布式/微服务补充。

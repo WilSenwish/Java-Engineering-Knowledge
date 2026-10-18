@@ -61,11 +61,11 @@ Java-Engineering-Knowledge/
 
 | 站点 | 目录抓取 | 内容沉淀 | 状态 |
 |------|----------|----------|------|
-| javaguide.cn | ✅ 13/13 板块 | ✅ 14 篇（P0 8 + 并发中/下 + Spring + MyBatis + JVM垃圾回收 + Redis数据结构 + OS面试题上）+ 五段式加工（01.1~01.6、02.1~02.3、03.1~03.2） | 进行中（P1 待抓取） |
+| javaguide.cn | ✅ 13/13 板块 | ✅ 15 篇（P0 8 + 并发中/下 + Spring + MyBatis + JVM垃圾回收 + Redis数据结构 + OS面试题上 + 网络面试题上）+ 五段式加工（01.1~01.6、02.1~02.3、03.1~03.2） | 进行中（P1 待抓取） |
 | javaup.chat | ✅ 6 大板块 ~250 篇 | ✅ 2 篇（HashMap 深度 + ConcurrentHashMap 线程安全）+ 五段式加工（01.2/01.3） | 进行中 |
-| xiaolincoding.com | ✅ 图解网络/系统/MySQL/Redis + 24套面试题 | ✅ 17 篇（+Cluster/SQL执行链路/IO多路复用）+ 五段式加工（01.5/01.6/02.1/02.2） | 进行中 |
+| xiaolincoding.com | ✅ 图解网络/系统/MySQL/Redis + 24套面试题 | ✅ 21 篇（+TCP可靠性/虚拟内存/过期淘汰）+ 五段式加工（01.5/01.6/02.1/02.2） | 进行中 |
 | nageoffer.com | ✅ 5 个项目卡片 | ✅ Ragent V2 项目介绍 + 五项目五段式加工（07.1） | 进行中 |
-| xiaolinnote.com | ✅ Agent/RAG/LLM/AI编程 89 题 | ✅ 89 题 + 图解Agent目录 + RAG 万字图解，五段式加工（06.1 新增 RAG 深度模块） | 进行中 |
+| xiaolinnote.com | ✅ Agent/RAG/LLM/AI编程 89 题 | ✅ 89 题 + 图解Agent目录 + RAG 万字图解 + ReAct/Multi-Agent，五段式加工（06.1 新增推理协作模块） | 进行中 |
 
 ### 已完成文件清单（sources/）
 
@@ -112,8 +112,11 @@ xiaolincoding/
 ├── redis/redlock-distributed-lock.md                  # Redis分布式锁高可用高性能（七层加固/Redlock争议）
 ├── redis/bigkey-impact.md                             # 大Key对持久化的影响（fork两阶段阻塞/内存大页）
 ├── redis/cluster.md                                   # 为什么要有cluster集群（哈希槽/MOVED-ASK/Gossip/故障转移）
+├── redis/expire-eviction.md                           # 过期删除策略和内存淘汰策略区别（八策略/LRU vs LFU）
 ├── mysql/sql-execution-flow.md                        # 执行一条select语句期间发生了什么（Server层全链路）
+├── network/tcp-reliability.md                         # TCP重传/滑动窗口/流量控制/拥塞控制（全参数）
 └── os/io-multiplexing.md                              # I/O多路复用select/poll/epoll（红黑树/就绪链表/LT-ET）
+└── os/virtual-memory.md                               # 为什么要有虚拟内存（分段分页/多级页表/TLB/Linux布局）
 
 nageoffer/
 ├── _index.md                                          # 5 个项目完整卡片（Ragent/oneThread/oneCoupon/12306/SaaS短链）
@@ -122,11 +125,14 @@ nageoffer/
 xiaolinnote/
 ├── _index.md                                          # Agent/RAG/LLM/AI编程 89 题完整题目清单
 ├── agent-illustrated-index.md                         # 图解Agent专栏目录（三方向8篇）
-└── rag-principles.md                                  # RAG检索增强万字图解（全链路/切割/Re-rank/多路召回/幻觉）
+├── rag-principles.md                                  # RAG检索增强万字图解（全链路/切割/Re-rank/多路召回/幻觉）
+├── agent/react-reasoning.md                           # Agent面试题5：推理模式/ReAct/Plan-and-Execute
+└── agent/multi-agent.md                               # Agent面试题10：Multi-Agent（context硬限制/三模式）
 ```
 
 javaguide/（cs-basics 子目录）
-└── cs-basics/os-questions-01.md                       # 操作系统常见面试题(上)（内核态/进程线程/调度/死锁）
+├── cs-basics/os-questions-01.md                       # 操作系统常见面试题(上)（内核态/进程线程/调度/死锁）
+└── cs-basics/network-questions-01.md                  # 计算机网络常见面试题(上)（体系结构/协议/缓存/RPC）
 ```
 
 ### 二次加工层（docs/）—— 五段式加工成果
@@ -139,28 +145,28 @@ docs/
 │   ├── 01.2-collections.md                    # 集合工程化（5模块：框架/List/HashMap/Queue/ConcurrentHashMap）
 │   ├── 01.3-concurrency.md                    # 并发编程（7模块：线程基础/协作/死锁/JMM与锁/线程池/ThreadLocal/AQS）
 │   ├── 01.4-jvm.md                            # JVM内核与线上排查（5模块，含垃圾回收深度/收集器选型）
-│   ├── 01.5-network-tcp.md                    # 计算机网络（4模块：TCP/可靠性/TCP与UDP/HTTP·HTTPS/I/O多路复用）
-│   └── 01.6-os-fundamentals.md                # 操作系统基础（2模块：内核态与系统调用/进程线程模型与调度）
+│   ├── 01.5-network-tcp.md                    # 计算机网络（5模块：TCP/可靠性全参数/TCP与UDP/HTTP·HTTPS/I/O多路复用/体系结构）
+│   └── 01.6-os-fundamentals.md                # 操作系统基础（3模块：内核态与系统调用/进程线程模型/内存管理虚拟内存）
 ├── 02-backend-components/                     # 域2 后端技术组件工程化
 │   ├── 02.1-mysql.md                          # MySQL工程化（11模块：…/锁体系/三大日志/BufferPool/SQL执行全链路）
-│   ├── 02.2-redis.md                          # Redis工程化（13模块：…/哨兵/分布式锁/大Key治理/Redis Cluster）
+│   ├── 02.2-redis.md                          # Redis工程化（14模块：…/哨兵/分布式锁/大Key治理/Redis Cluster/过期淘汰）
 │   └── 02.3-spring-mybatis.md                 # Spring & MyBatis 工程化（5模块：IoC/AOP/事务/MVC/MyBatis）
 ├── 03-distributed/                            # 域3 分布式与高可用架构
 │   ├── 03.1-distributed-theory.md             # 分布式理论与核心方案（CAP/BASE、RPC、ID锁事务）
 │   └── 03.2-microservices.md                  # 微服务架构工程化（拆分/治理/一致性/稳定性）
 ├── 06-performance-ai/
-│   └── 06.1-ai-frontier.md                    # AI前沿（5模块：Agent/RAG题库/工具调用/AI编程/RAG全链路深度）
+│   └── 06.1-ai-frontier.md                    # AI前沿（6模块：Agent/RAG题库/工具调用/AI编程/RAG全链路/推理与协作模式）
 ├── 07-business-cases/
 │   └── 07.1-projects.md                       # 实战项目案例库（Ragent V2深挖 + oneThread + 高并发三案例）
 ├── 04-delivery-cloudnative/                   # 域4 待收集（CI/CD/Docker/K8s）
 └── 05-ops-observability/                      # 域5 待收集（ELK/Prometheus/SkyWalking）
 ```
 
-### 下一批抓取计划（循环8）
+### 下一批抓取计划（循环9 · 收官）
 
 | 站点 | 待抓内容 |
 |------|----------|
-| xiaolincoding.com | OS 内存管理（虚拟内存/页面置换）、Linux 命令/文件系统；TCP 重传与拥塞控制 |
-| javaguide.cn | 计算机网络面试题（上/下）、HTTP vs RPC；OS 面试题（下） |
-| nageoffer.com | oneThread 动态线程池、oneCoupon 牛券项目深挖 |
-| xiaolinnote.com | 图解 Agent 专栏分篇（概念/RAG 工程化/Agent 框架） |
+| xiaolinnote.com | 图解 Claude Code / 图解 Codex（AI 编程工程化，域4/6） |
+| javaguide.cn | Docker/K8s 面试题（域4）、线上问题排查/生产经验（域5） |
+| nageoffer.com | oneThread 动态线程池、牛券项目（域名页有公开介绍） |
+| 补充目标 | 域4 工程交付与云原生、域5 生产运维与可观测性两个空白域补白 |
