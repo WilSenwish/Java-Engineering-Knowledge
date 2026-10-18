@@ -1,0 +1,153 @@
+# Java 后端开发 & 架构 知识库 · 总索引
+
+> 依据《Java 后端开发 & 架构・复杂生产环境工程化落地全链路知识库构建规划.md》执行。
+> 本文件是知识库总入口：定义内容来源、处理顺序、目录规范与沉淀标准。
+
+## 一、内容来源与处理顺序
+
+| 批次 | 站点 | 定位 | 处理顺序理由 | 对应知识域 |
+|------|------|------|--------------|------------|
+| 第一批 | [javaguide.cn](https://javaguide.cn/) | Java 全栈知识 + 面试体系（GitHub 156K+ Star） | **知识库主干**：Java 核心、数据库、分布式、高并发/高可用、系统设计体系最完整，作为主干骨架优先落地 | 域1/2/3 |
+| 第一批 | [javaup.chat](https://javaup.chat/) | 码力全开：超级八股文（深度原理+代码+流程图）+ 生产级项目实战 | 与 JavaGuide 互补去重，补深度原理与高并发项目实战 | 域1/2/3/7 |
+| 第二批 | [xiaolincoding.com](https://xiaolincoding.com/) | 小林coding：图解网络/系统/MySQL/Redis + 后端面试八股 | 计算机基础原理可视化补充，补网络/OS 短板 | 域1/2/3 |
+| 第三批 | [nageoffer.com](https://nageoffer.com/) | 拿个offer：Ragent / oneThread / oneCoupon / 12306 / Link 五大项目实战 | 业务场景与实战案例库核心来源 | 域7 |
+| 第四批 | [xiaolinnote.com](https://xiaolinnote.com/) | 小林面试笔记：Agent/RAG/LLM/AI编程面试题 + 图解Agent/Claude Code/Codex | AI 前沿内容，作为进阶提升知识域的前沿模块 | 域6 |
+
+**处理原则**：先主干（javaguide/javaup）→ 后基础图解（xiaolincoding）→ 再实战案例（nageoffer）→ 最后前沿（xiaolinnote）。与规划文档"阶段一优先填充 Java核心 / Spring / MySQL / Redis 三大基础模块"一致。
+
+## 二、目录结构
+
+```
+Java-Engineering-Knowledge/
+├── README.md                              # 本文件：总索引
+├── Java 后端开发 & 架构・...构建规划.md     # 原始规划文档
+└── sources/                               # 原始收集层（按站点归档，保留原站结构）
+    ├── javaguide/                         # 站点1：JavaGuide（主干）
+    │   ├── _index.md                      # 站点完整目录
+    │   ├── java-basis/                    # Java 基础
+    │   ├── java-collection/               # Java 集合
+    │   ├── java-concurrent/               # Java 并发
+    │   ├── java-jvm/                      # JVM
+    │   ├── database-mysql/                # MySQL
+    │   ├── database-redis/                # Redis
+    │   ├── distributed-system/            # 分布式
+    │   ├── high-performance/              # 高性能
+    │   ├── high-availability/             # 高可用
+    │   ├── system-design/                 # 系统设计
+    │   ├── cs-basics/                     # 计算机基础
+    │   ├── ai/                            # AI 应用开发
+    │   └── ai-coding/                     # AI 编程
+    ├── javaup/                            # 站点2：码力全开
+    ├── xiaolincoding/                     # 站点3：小林coding
+    ├── nageoffer/                         # 站点4：拿个offer
+    └── xiaolinnote/                       # 站点5：小林面试笔记
+```
+
+> 规划阶段只建"原始收集层"（sources/）。各知识域的 curated 文档（docs/01~07）在收集完成后按五段式标准二次加工，避免边收边改导致结构反复。
+
+## 三、内容沉淀标准（五段式）
+
+每个知识点统一采用五段式结构，确保工程化落地属性：
+
+1. **核心原理**：精简讲清本质，避免冗余
+2. **生产落地**：配置示例、实现步骤、集成方式
+3. **踩坑规避**：生产环境常见问题、根因、解决方案
+4. **优化进阶**：性能优化、高可用加固方案
+5. **选型对比**：同类技术的适用场景、优劣势分析
+
+收集层（sources/）的 md 文件统一带头部元信息：`来源站点 / 原文链接 / 抓取日期 / 所属知识域`，保证可溯源。
+
+## 四、进度看板
+
+| 站点 | 目录抓取 | 内容沉淀 | 状态 |
+|------|----------|----------|------|
+| javaguide.cn | ✅ 13/13 板块 | ✅ 13 篇（P0 8 + 并发中/下 + Spring + MyBatis + JVM垃圾回收 + Redis数据结构）+ 五段式加工（01.1~01.4、02.1~02.3、03.1~03.2） | 进行中（P1 待抓取） |
+| javaup.chat | ✅ 6 大板块 ~250 篇 | ✅ 2 篇（HashMap 深度 + ConcurrentHashMap 线程安全）+ 五段式加工（01.2/01.3） | 进行中 |
+| xiaolincoding.com | ✅ 图解网络/系统/MySQL/Redis + 24套面试题 | ✅ 12 篇（+BufferPool/主从复制/缓存一致性）+ 五段式加工（01.5/02.1/02.2） | 进行中 |
+| nageoffer.com | ✅ 5 个项目卡片 | ✅ Ragent V2 项目介绍 + 五项目五段式加工（07.1） | 进行中 |
+| xiaolinnote.com | ✅ Agent/RAG/LLM/AI编程 89 题 | ✅ 89 题 + 图解Agent目录 + RAG 万字图解，五段式加工（06.1 新增 RAG 深度模块） | 进行中 |
+
+### 已完成文件清单（sources/）
+
+```
+javaguide/
+├── _index.md                                          # 站点完整目录（13 板块 200+ 篇文章）
+├── java-basis/java-basic-questions-01.md              # Java基础面试题(上)
+├── java-collection/java-collection-questions-01.md    # Java集合面试题(上)
+├── java-concurrent/java-concurrent-questions-01.md    # Java并发面试题(上)
+├── java-concurrent/java-concurrent-questions-02.md    # Java并发面试题(中)：JMM/volatile/锁/CAS
+├── java-concurrent/java-concurrent-questions-03.md    # Java并发面试题(下)：ThreadLocal/线程池/Future/AQS
+├── java-jvm/jvm-interview-questions.md                # JVM面试题总结
+├── java-jvm/jvm-garbage-collection.md                 # JVM垃圾回收详解（算法/收集器/GC过程）
+├── database-mysql/mysql-questions-01.md               # MySQL面试题总结
+├── database-redis/redis-questions-01.md               # Redis面试题(上)
+├── database-redis/redis-data-structures-01.md         # Redis 5种基本数据类型详解
+├── distributed-system/distributed-system-interview-questions.md  # 分布式面试题总结
+├── distributed-system/microservices-interview-questions.md       # 微服务面试题总结
+├── system-design/spring-questions.md                  # Spring常见面试题（IoC/AOP/事务/MVC）
+└── system-design/mybatis-questions.md                 # MyBatis常见面试题（执行流/缓存/插件）
+
+javaup/
+├── _index.md                                          # 站点完整目录（6 板块 ~250 篇 + 7 实战项目）
+├── java-collection/hashmap-core-principles.md         # HashMap核心原理与数据结构
+└── java-collection/concurrenthashmap-thread-safety.md # ConcurrentHashMap线程安全机制
+
+xiaolincoding/
+├── _index.md                                          # 站点完整目录（图解网络/系统/MySQL/Redis + 24套面试题）
+├── network/tcp-interview.md                           # TCP三次握手与四次挥手面试题
+├── network/http-interview.md                          # HTTP常见面试题
+├── mysql/index-interview.md                           # 索引常见面试题
+├── mysql/mvcc-transaction-isolation.md                # 事务隔离级别是怎么实现的（MVCC）
+├── mysql/index-invalid.md                             # 索引失效有哪些（六大场景）
+├── mysql/mysql-locks.md                               # MySQL有哪些锁（三级锁体系/死锁）
+├── mysql/three-logs.md                                # 三大日志与两阶段提交
+├── mysql/buffer-pool.md                               # 揭开BufferPool的面纱（三链表/young-old分区）
+├── redis/aof-persistence.md                           # AOF持久化是怎么实现的
+├── redis/rdb-snapshot.md                              # RDB快照是怎么实现的（COW/混合持久化）
+├── redis/cache-problems.md                            # 缓存雪崩、击穿、穿透
+├── redis/master-slave-replication.md                  # 主从复制是怎么实现的（全量/增量/脑裂防护）
+└── redis/mysql-redis-consistency.md                   # 数据库和缓存如何保证一致性
+
+nageoffer/
+├── _index.md                                          # 5 个项目完整卡片（Ragent/oneThread/oneCoupon/12306/SaaS短链）
+└── ragent-intro.md                                    # Ragent V2 项目介绍（7模块/生产级特性/设计模式）
+
+xiaolinnote/
+├── _index.md                                          # Agent/RAG/LLM/AI编程 89 题完整题目清单
+├── agent-illustrated-index.md                         # 图解Agent专栏目录（三方向8篇）
+└── rag-principles.md                                  # RAG检索增强万字图解（全链路/切割/Re-rank/多路召回/幻觉）
+```
+
+### 二次加工层（docs/）—— 五段式加工成果
+
+```
+docs/
+├── README.md                                  # 二次加工层索引 + 五段式模板 + 循环进度
+├── 01-java-core/                              # 域1 Java核心与编码工程化
+│   ├── 01.1-java-basics.md                    # Java基础与语法工程化（3模块×五段式）
+│   ├── 01.2-collections.md                    # 集合工程化（5模块：框架/List/HashMap/Queue/ConcurrentHashMap）
+│   ├── 01.3-concurrency.md                    # 并发编程（7模块：线程基础/协作/死锁/JMM与锁/线程池/ThreadLocal/AQS）
+│   ├── 01.4-jvm.md                            # JVM内核与线上排查（5模块，含垃圾回收深度/收集器选型）
+│   └── 01.5-network-tcp.md                    # 计算机网络（3模块：TCP/可靠性/TCP与UDP/HTTP·HTTPS）
+├── 02-backend-components/                     # 域2 后端技术组件工程化
+│   ├── 02.1-mysql.md                          # MySQL工程化（10模块：…/锁体系/三大日志/BufferPool深度）
+│   ├── 02.2-redis.md                          # Redis工程化（9模块：…/AOF/缓存三难题/RDB/主从复制/缓存一致性）
+│   └── 02.3-spring-mybatis.md                 # Spring & MyBatis 工程化（5模块：IoC/AOP/事务/MVC/MyBatis）
+├── 03-distributed/                            # 域3 分布式与高可用架构
+│   ├── 03.1-distributed-theory.md             # 分布式理论与核心方案（CAP/BASE、RPC、ID锁事务）
+│   └── 03.2-microservices.md                  # 微服务架构工程化（拆分/治理/一致性/稳定性）
+├── 06-performance-ai/
+│   └── 06.1-ai-frontier.md                    # AI前沿（5模块：Agent/RAG题库/工具调用/AI编程/RAG全链路深度）
+├── 07-business-cases/
+│   └── 07.1-projects.md                       # 实战项目案例库（Ragent V2深挖 + oneThread + 高并发三案例）
+├── 04-delivery-cloudnative/                   # 域4 待收集（CI/CD/Docker/K8s）
+└── 05-ops-observability/                      # 域5 待收集（ELK/Prometheus/SkyWalking）
+```
+
+### 下一批抓取计划（循环6）
+
+| 站点 | 待抓内容 |
+|------|----------|
+| xiaolincoding.com | 哨兵机制、Cluster 集群、RedLock 争议、大 Key/热 Key 治理 |
+| javaup.chat | 框架板块（Spring/MyBatis 深度，换非 hub 入口）；Synchronized 锁升级 |
+| javaguide.cn | Redis 面试题(下)、设计模式专题 |

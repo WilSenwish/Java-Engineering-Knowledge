@@ -1,0 +1,11 @@
+# WorkBuddy internal data
+.workbuddy/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+*.iml
+.vscode/
