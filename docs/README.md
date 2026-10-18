@@ -23,9 +23,10 @@
 | 域1 | [01.2 Java 集合工程化（含 HashMap/ConcurrentHashMap 深度）](01-java-core/01.2-collections.md) | javaguide/java-collection + javaup/hashmap + javaup/concurrenthashmap | ✅ |
 | 域1 | [01.3 Java 并发编程工程化](01-java-core/01.3-concurrency.md) | javaguide/java-concurrent 上+中+下 | ✅ |
 | 域1 | [01.4 JVM 内核与线上排查](01-java-core/01.4-jvm.md) | javaguide/java-jvm | ✅ |
-| 域1（计算机基础） | [01.5 计算机网络 · TCP/HTTP 深度](01-java-core/01.5-network-tcp.md) | xiaolincoding/tcp + http | ✅ |
-| 域2 后端技术组件工程化 | [02.1 MySQL 工程化](02-backend-components/02.1-mysql.md) | javaguide/mysql + 小林index/mvcc/索引失效/锁/日志/BufferPool | ✅ |
-| 域2 | [02.2 Redis 工程化](02-backend-components/02.2-redis.md) | javaguide/redis 上+下 + 小林AOF/RDB/缓存三难题/主从/一致性/哨兵/Redlock/大Key | ✅ |
+| 域1（计算机基础） | [01.5 计算机网络 · TCP/HTTP/I/O 多路复用](01-java-core/01.5-network-tcp.md) | xiaolincoding/tcp + http + IO多路复用 | ✅ |
+| 域1（计算机基础） | [01.6 操作系统基础与进程线程模型](01-java-core/01.6-os-fundamentals.md) | javaguide/cs-basics/os-questions-01 | ✅ |
+| 域2 后端技术组件工程化 | [02.1 MySQL 工程化](02-backend-components/02.1-mysql.md) | javaguide/mysql + 小林index/mvcc/索引失效/锁/日志/BufferPool/SQL执行链路 | ✅ |
+| 域2 | [02.2 Redis 工程化](02-backend-components/02.2-redis.md) | javaguide/redis 上+下 + 小林AOF/RDB/缓存三难题/主从/一致性/哨兵/Redlock/大Key/Cluster | ✅ |
 | 域2 | [02.3 Spring & MyBatis 工程化](02-backend-components/02.3-spring-mybatis.md) | javaguide/system-design（Spring+MyBatis） | ✅ |
 | 域3 分布式与高可用架构 | [03.1 分布式理论与核心方案](03-distributed/03.1-distributed-theory.md) | javaguide/distributed-system | ✅ |
 | 域3 | [03.2 微服务架构工程化](03-distributed/03.2-microservices.md) | javaguide/microservices | ✅ |
@@ -66,4 +67,9 @@
 - **循环6（已完成）**：新增抓取 4 篇（哨兵 / Redlock 分布式锁 / 大 Key 对持久化影响 / Redis 面试题下；javaguide 设计模式篇为 PDF 推广页、javaup 设计模式 hub 页 403，已记录换源）→ 五段式增量并入：
   - 02.2 新增**模块十：哨兵与故障转移**（主客观下线/Leader 选举双条件/转移四步/quorum 规则）、**模块十一：分布式锁工业级方案**（七层加固/Redlock 与 fencing token 之争/Singleflight 与乐观锁替代）、**模块十二：大 Key 与热 Key 治理**（fork 两阶段阻塞/内存大页陷阱/UNLINK/发现手段矩阵）
   - 02.2 模块一补充批量操作三选型、Redis 阻塞原因清单
-- **循环7 计划**：小林 Cluster 集群篇；设计模式换源（javaup 文章直链）；javaguide 计算机基础（网络/OS）补充。
+- **循环7（已完成）**：新增抓取 4 篇（Redis Cluster / OS 面试题上 / I/O 多路复用 / SQL 执行全链路；设计模式换源仍受阻：javaguide 为 PDF 推广页、javaup hub 页 403）→ 五段式增量并入：
+  - 02.2 新增**模块十三：Redis Cluster 切片集群**（哈希槽 16384 推导/Smart Client/MOVED vs ASK/Gossip/pfail-fail 两阶段/HashTag/CROSSSLOT 规避/AP 定位）
+  - 02.1 新增**模块十一：SQL 执行全链路**（连接器权限快照/查询缓存 8.0 移除真相/解析器与预处理器边界/优化器 CBO/执行器双指针模型/长连接内存治理/ICP 索引下推）
+  - 01.5 新增**模块四：I/O 多路复用与高并发网络模型**（select/poll/epoll 演进/红黑树+就绪链表/LT vs ET/C10K/共享内存误区）
+  - **新建 01.6 操作系统基础与进程线程模型**（用户态内核态三事件/系统调用 vs 上下文切换/进程线程 PCB-TCB/调度算法谱系/IPC/死锁四条件与检测）
+- **循环8 计划**：小林 OS 内存管理/文件系统、javaguide 网络面试题补充；nageoffer oneThread/oneCoupon 项目深挖；xiaolinnote 图解 Agent 专栏分篇。

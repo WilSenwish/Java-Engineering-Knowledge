@@ -61,9 +61,9 @@ Java-Engineering-Knowledge/
 
 | 站点 | 目录抓取 | 内容沉淀 | 状态 |
 |------|----------|----------|------|
-| javaguide.cn | ✅ 13/13 板块 | ✅ 13 篇（P0 8 + 并发中/下 + Spring + MyBatis + JVM垃圾回收 + Redis数据结构）+ 五段式加工（01.1~01.4、02.1~02.3、03.1~03.2） | 进行中（P1 待抓取） |
+| javaguide.cn | ✅ 13/13 板块 | ✅ 14 篇（P0 8 + 并发中/下 + Spring + MyBatis + JVM垃圾回收 + Redis数据结构 + OS面试题上）+ 五段式加工（01.1~01.6、02.1~02.3、03.1~03.2） | 进行中（P1 待抓取） |
 | javaup.chat | ✅ 6 大板块 ~250 篇 | ✅ 2 篇（HashMap 深度 + ConcurrentHashMap 线程安全）+ 五段式加工（01.2/01.3） | 进行中 |
-| xiaolincoding.com | ✅ 图解网络/系统/MySQL/Redis + 24套面试题 | ✅ 15 篇（+哨兵/Redlock/大Key）+ 五段式加工（01.5/02.1/02.2） | 进行中 |
+| xiaolincoding.com | ✅ 图解网络/系统/MySQL/Redis + 24套面试题 | ✅ 17 篇（+Cluster/SQL执行链路/IO多路复用）+ 五段式加工（01.5/01.6/02.1/02.2） | 进行中 |
 | nageoffer.com | ✅ 5 个项目卡片 | ✅ Ragent V2 项目介绍 + 五项目五段式加工（07.1） | 进行中 |
 | xiaolinnote.com | ✅ Agent/RAG/LLM/AI编程 89 题 | ✅ 89 题 + 图解Agent目录 + RAG 万字图解，五段式加工（06.1 新增 RAG 深度模块） | 进行中 |
 
@@ -110,7 +110,10 @@ xiaolincoding/
 ├── redis/mysql-redis-consistency.md                   # 数据库和缓存如何保证一致性
 ├── redis/sentinel.md                                  # 为什么要有哨兵（主客观下线/选主/故障转移四步）
 ├── redis/redlock-distributed-lock.md                  # Redis分布式锁高可用高性能（七层加固/Redlock争议）
-└── redis/bigkey-impact.md                             # 大Key对持久化的影响（fork两阶段阻塞/内存大页）
+├── redis/bigkey-impact.md                             # 大Key对持久化的影响（fork两阶段阻塞/内存大页）
+├── redis/cluster.md                                   # 为什么要有cluster集群（哈希槽/MOVED-ASK/Gossip/故障转移）
+├── mysql/sql-execution-flow.md                        # 执行一条select语句期间发生了什么（Server层全链路）
+└── os/io-multiplexing.md                              # I/O多路复用select/poll/epoll（红黑树/就绪链表/LT-ET）
 
 nageoffer/
 ├── _index.md                                          # 5 个项目完整卡片（Ragent/oneThread/oneCoupon/12306/SaaS短链）
@@ -120,6 +123,10 @@ xiaolinnote/
 ├── _index.md                                          # Agent/RAG/LLM/AI编程 89 题完整题目清单
 ├── agent-illustrated-index.md                         # 图解Agent专栏目录（三方向8篇）
 └── rag-principles.md                                  # RAG检索增强万字图解（全链路/切割/Re-rank/多路召回/幻觉）
+```
+
+javaguide/（cs-basics 子目录）
+└── cs-basics/os-questions-01.md                       # 操作系统常见面试题(上)（内核态/进程线程/调度/死锁）
 ```
 
 ### 二次加工层（docs/）—— 五段式加工成果
@@ -132,10 +139,11 @@ docs/
 │   ├── 01.2-collections.md                    # 集合工程化（5模块：框架/List/HashMap/Queue/ConcurrentHashMap）
 │   ├── 01.3-concurrency.md                    # 并发编程（7模块：线程基础/协作/死锁/JMM与锁/线程池/ThreadLocal/AQS）
 │   ├── 01.4-jvm.md                            # JVM内核与线上排查（5模块，含垃圾回收深度/收集器选型）
-│   └── 01.5-network-tcp.md                    # 计算机网络（3模块：TCP/可靠性/TCP与UDP/HTTP·HTTPS）
+│   ├── 01.5-network-tcp.md                    # 计算机网络（4模块：TCP/可靠性/TCP与UDP/HTTP·HTTPS/I/O多路复用）
+│   └── 01.6-os-fundamentals.md                # 操作系统基础（2模块：内核态与系统调用/进程线程模型与调度）
 ├── 02-backend-components/                     # 域2 后端技术组件工程化
-│   ├── 02.1-mysql.md                          # MySQL工程化（10模块：…/锁体系/三大日志/BufferPool深度）
-│   ├── 02.2-redis.md                          # Redis工程化（12模块：…/RDB/主从复制/缓存一致性/哨兵/分布式锁/大Key治理）
+│   ├── 02.1-mysql.md                          # MySQL工程化（11模块：…/锁体系/三大日志/BufferPool/SQL执行全链路）
+│   ├── 02.2-redis.md                          # Redis工程化（13模块：…/哨兵/分布式锁/大Key治理/Redis Cluster）
 │   └── 02.3-spring-mybatis.md                 # Spring & MyBatis 工程化（5模块：IoC/AOP/事务/MVC/MyBatis）
 ├── 03-distributed/                            # 域3 分布式与高可用架构
 │   ├── 03.1-distributed-theory.md             # 分布式理论与核心方案（CAP/BASE、RPC、ID锁事务）
@@ -148,10 +156,11 @@ docs/
 └── 05-ops-observability/                      # 域5 待收集（ELK/Prometheus/SkyWalking）
 ```
 
-### 下一批抓取计划（循环7）
+### 下一批抓取计划（循环8）
 
 | 站点 | 待抓内容 |
 |------|----------|
-| xiaolincoding.com | Cluster 集群篇（16384 槽/Gossip/扩缩容） |
-| javaup.chat | 设计模式文章直链（hub 页 403，需从站内其他入口找） |
-| javaguide.cn | 计算机基础（计算机网络/操作系统）补充 |
+| xiaolincoding.com | OS 内存管理（虚拟内存/页面置换）、Linux 命令/文件系统；TCP 重传与拥塞控制 |
+| javaguide.cn | 计算机网络面试题（上/下）、HTTP vs RPC；OS 面试题（下） |
+| nageoffer.com | oneThread 动态线程池、oneCoupon 牛券项目深挖 |
+| xiaolinnote.com | 图解 Agent 专栏分篇（概念/RAG 工程化/Agent 框架） |
