@@ -30,10 +30,10 @@
 | 域2 | [02.3 Spring & MyBatis 工程化](02-backend-components/02.3-spring-mybatis.md) | javaguide/system-design（Spring+MyBatis） | ✅ |
 | 域3 分布式与高可用架构 | [03.1 分布式理论与核心方案](03-distributed/03.1-distributed-theory.md) | javaguide/distributed-system | ✅ |
 | 域3 | [03.2 微服务架构工程化](03-distributed/03.2-microservices.md) | javaguide/microservices | ✅ |
-| 域6 性能优化与架构演进 | [06.1 AI 前沿：Agent/RAG/LLM/AI编程](06-performance-ai/06.1-ai-frontier.md) | xiaolinnote 89题 + 图解Agent/RAG万字图解 + ReAct/Multi-Agent | ✅ |
+| 域6 性能优化与架构演进 | [06.1 AI 前沿：Agent/RAG/LLM/AI编程](06-performance-ai/06.1-ai-frontier.md) | xiaolinnote 89题 + 图解Agent/RAG万字图解 + ReAct/Multi-Agent + ClaudeCode/Codex | ✅ |
 | 域7 业务场景与实战案例 | [07.1 实战项目案例库](07-business-cases/07.1-projects.md) | nageoffer 5项目 | ✅ |
-| 域4 工程交付与云原生 | — | 待收集（规划：CI/CD、Docker、K8s） | ⏳ |
-| 域5 生产运维与可观测性 | — | 待收集（规划：ELK、Prometheus、SkyWalking） | ⏳ |
+| 域4 工程交付与云原生 | [04.1 AI 原生研发与 Coding Agent 工程化](04-delivery-cloudnative/04.1-ai-native-delivery.md) | xiaolinnote 图解ClaudeCode/Codex + oneThread | ✅（首发） |
+| 域5 生产运维与可观测性 | [05.1 生产运维与线上排查实战](05-ops-observability/05.1-troubleshooting.md) | javaguide 线上问题排查 + JDK工具总结 | ✅（首发） |
 
 ## 三、与收集层的协作规则
 
@@ -77,4 +77,23 @@
   - 01.6 新增**模块三：内存管理（虚拟内存与分页）**（分段 vs 分页对比/多级页表/TLB/Linux 布局/COW 与 OOM Killer/JVM AlwaysPreTouch）
   - 02.2 新增**模块十四：过期删除与内存淘汰**（两机制分野表/惰性+定期实现细节/八策略/LRU vs LFU/logc 衰减增长）
   - 06.1 新增**模块六：Agent 推理与协作模式**（ReAct 代码驱动本质/漂移与错误传播/Plan-and-Execute 动态重规划/大小模型混合降本 70-90%/Multi-Agent 三模式/上下文隔离即质量）
-- **循环9 计划**：域4 工程交付与云原生（Docker/K8s/CI-CD）+ 域5 生产运维与可观测性补白；nageoffer 剩余项目深挖（oneThread/牛券/Link）；javaguide 分布式/微服务补充。
+- **循环9（已完成 · 收官）**：新增抓取 5 篇（Java 线上问题排查 / JDK 监控工具总结 / 图解 Claude Code 目录 / oneThread / 图解 Codex 目录）→ 五段式加工：
+  - **新建 05.1 生产运维与线上排查实战**（域5 首发：现象→入口速查表/止血留证取舍/CPU·Load·内存·GC·线程池·连接池·Redis·MQ 全场景 SOP/jcmd-MAT-JFR-Arthas 工具矩阵）
+  - **新建 04.1 AI 原生研发与 Coding Agent 工程化**（域4 首发：六件工程化设施/源码级设计决策 grep≠RAG/落地顺序/SDD 规约驱动/Starter 化交付范式）
+  - 01.3 模块五新增「动态线程池工程化实战」附注（oneThread 四件套 + 设计模式映射）
+  - 07.1 模块三补充 oneThread 项目结构与技术栈全貌
+  - 06.1 模块四新增「Coding Agent 工程化能力栈」附注
+
+## 五、全量完成度总览
+
+| 知识域 | 文档数 | 状态 |
+|--------|--------|------|
+| 域1 Java核心与编码工程化 | 6（01.1~01.6） | ✅ |
+| 域2 后端技术组件工程化 | 3（02.1~02.3） | ✅ |
+| 域3 分布式与高可用架构 | 2（03.1~03.2） | ✅ |
+| 域4 工程交付与云原生 | 1（04.1，AI 原生方向） | ✅ 首发；传统 CI/CD·Docker·K8s 待扩充 |
+| 域5 生产运维与可观测性 | 1（05.1） | ✅ 首发；监控三支柱深度待扩充 |
+| 域6 性能优化与架构演进 | 1（06.1，六模块） | ✅ |
+| 域7 业务场景与实战案例 | 1（07.1） | ✅ |
+
+**后续扩充方向**（非本轮范围）：传统云原生（Docker/K8s/CI-CD）、可观测性三支柱（Prometheus/OTel/ELK）、javaguide 分布式/微服务 P1 篇目、设计模式专题（换源受阻待解）。

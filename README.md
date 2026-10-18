@@ -61,11 +61,11 @@ Java-Engineering-Knowledge/
 
 | 站点 | 目录抓取 | 内容沉淀 | 状态 |
 |------|----------|----------|------|
-| javaguide.cn | ✅ 13/13 板块 | ✅ 15 篇（P0 8 + 并发中/下 + Spring + MyBatis + JVM垃圾回收 + Redis数据结构 + OS面试题上 + 网络面试题上）+ 五段式加工（01.1~01.6、02.1~02.3、03.1~03.2） | 进行中（P1 待抓取） |
-| javaup.chat | ✅ 6 大板块 ~250 篇 | ✅ 2 篇（HashMap 深度 + ConcurrentHashMap 线程安全）+ 五段式加工（01.2/01.3） | 进行中 |
-| xiaolincoding.com | ✅ 图解网络/系统/MySQL/Redis + 24套面试题 | ✅ 21 篇（+TCP可靠性/虚拟内存/过期淘汰）+ 五段式加工（01.5/01.6/02.1/02.2） | 进行中 |
-| nageoffer.com | ✅ 5 个项目卡片 | ✅ Ragent V2 项目介绍 + 五项目五段式加工（07.1） | 进行中 |
-| xiaolinnote.com | ✅ Agent/RAG/LLM/AI编程 89 题 | ✅ 89 题 + 图解Agent目录 + RAG 万字图解 + ReAct/Multi-Agent，五段式加工（06.1 新增推理协作模块） | 进行中 |
+| javaguide.cn | ✅ 13/13 板块 | ✅ 17 篇（P0 8 + 并发中/下 + Spring + MyBatis + JVM垃圾回收 + Redis数据结构 + OS面试题上 + 网络面试题上 + 线上排查 + JDK工具）+ 五段式加工（01.1~01.6、02.1~02.3、03.1~03.2、05.1） | ✅ 循环1~9 完成 |
+| javaup.chat | ✅ 6 大板块 ~250 篇 | ✅ 2 篇（HashMap 深度 + ConcurrentHashMap 线程安全）+ 五段式加工（01.2/01.3） | 进行中（hub 页 403，换入口待办） |
+| xiaolincoding.com | ✅ 图解网络/系统/MySQL/Redis + 24套面试题 | ✅ 21 篇（+TCP可靠性/虚拟内存/过期淘汰）+ 五段式加工（01.5/01.6/02.1/02.2） | ✅ 循环1~9 完成 |
+| nageoffer.com | ✅ 5 个项目卡片 | ✅ Ragent V2 + oneThread 项目介绍 + 五项目五段式加工（07.1） | ✅ 循环1~9 完成 |
+| xiaolinnote.com | ✅ Agent/RAG/LLM/AI编程 89 题 | ✅ 89 题 + 图解Agent/RAG万字图解 + ReAct/Multi-Agent + ClaudeCode/Codex 目录，五段式加工（06.1/04.1） | ✅ 循环1~9 完成 |
 
 ### 已完成文件清单（sources/）
 
@@ -120,19 +120,23 @@ xiaolincoding/
 
 nageoffer/
 ├── _index.md                                          # 5 个项目完整卡片（Ragent/oneThread/oneCoupon/12306/SaaS短链）
-└── ragent-intro.md                                    # Ragent V2 项目介绍（7模块/生产级特性/设计模式）
+├── ragent-intro.md                                    # Ragent V2 项目介绍（7模块/生产级特性/设计模式）
+└── onethread.md                                       # oneThread动态线程池（配置中心热更/拒绝代理/监控告警/项目结构）
 
 xiaolinnote/
 ├── _index.md                                          # Agent/RAG/LLM/AI编程 89 题完整题目清单
 ├── agent-illustrated-index.md                         # 图解Agent专栏目录（三方向8篇）
 ├── rag-principles.md                                  # RAG检索增强万字图解（全链路/切割/Re-rank/多路召回/幻觉）
 ├── agent/react-reasoning.md                           # Agent面试题5：推理模式/ReAct/Plan-and-Execute
-└── agent/multi-agent.md                               # Agent面试题10：Multi-Agent（context硬限制/三模式）
-```
+├── agent/multi-agent.md                               # Agent面试题10：Multi-Agent（context硬限制/三模式）
+├── claudecode/index.md                                # 图解Claude Code专栏目录（五方向/源码解析/工程化六件套）
+└── codex/index.md                                     # 图解Codex专栏目录（AGENTS.md/Skills/Harness架构）
 
-javaguide/（cs-basics 子目录）
+javaguide/（cs-basics + java-jvm 子目录）
 ├── cs-basics/os-questions-01.md                       # 操作系统常见面试题(上)（内核态/进程线程/调度/死锁）
-└── cs-basics/network-questions-01.md                  # 计算机网络常见面试题(上)（体系结构/协议/缓存/RPC）
+├── cs-basics/network-questions-01.md                  # 计算机网络常见面试题(上)（体系结构/协议/缓存/RPC）
+├── java-jvm/jvm-troubleshooting.md                    # Java后端线上问题排查（CPU/内存/GC/线程池/DB/Redis/MQ全场景SOP）
+└── java-jvm/jdk-monitoring-tools.md                   # JDK监控和故障处理工具总结（jps/jstat/jmap/jstack/jcmd/JFR/MAT）
 ```
 
 ### 二次加工层（docs/）—— 五段式加工成果
@@ -158,15 +162,15 @@ docs/
 │   └── 06.1-ai-frontier.md                    # AI前沿（6模块：Agent/RAG题库/工具调用/AI编程/RAG全链路/推理与协作模式）
 ├── 07-business-cases/
 │   └── 07.1-projects.md                       # 实战项目案例库（Ragent V2深挖 + oneThread + 高并发三案例）
-├── 04-delivery-cloudnative/                   # 域4 待收集（CI/CD/Docker/K8s）
-└── 05-ops-observability/                      # 域5 待收集（ELK/Prometheus/SkyWalking）
+├── 04-delivery-cloudnative/
+│   └── 04.1-ai-native-delivery.md             # AI原生研发与Coding Agent工程化（六件设施/源码级设计/Starter交付范式）
+└── 05-ops-observability/
+    └── 05.1-troubleshooting.md                # 生产运维与线上排查实战（现象速查表/止血留证/全场景SOP/工具矩阵）
 ```
 
-### 下一批抓取计划（循环9 · 收官）
+### 状态：循环 1~9 全部完成 ✅
 
-| 站点 | 待抓内容 |
-|------|----------|
-| xiaolinnote.com | 图解 Claude Code / 图解 Codex（AI 编程工程化，域4/6） |
-| javaguide.cn | Docker/K8s 面试题（域4）、线上问题排查/生产经验（域5） |
-| nageoffer.com | oneThread 动态线程池、牛券项目（域名页有公开介绍） |
-| 补充目标 | 域4 工程交付与云原生、域5 生产运维与可观测性两个空白域补白 |
+- **sources/** 收集层：46 个 md（41 篇内容 + 5 站点目录），全部带溯源元信息；
+- **docs/** 加工层：14 个 md（13 篇知识域文档 + 索引），七大知识域全部有首发文档，统一五段式；
+- **远程仓库**：https://github.com/WilSenwish/Java-Engineering-Knowledge （main 分支，本地提交 9 个循环提交；网络抖动时仅保本地）；
+- **后续扩充方向**（非本轮范围）：传统云原生（Docker/K8s/CI-CD）、可观测性三支柱深度（Prometheus/OTel/ELK）、javaguide 分布式/微服务 P1 篇目、设计模式专题（换源受阻待解）。
