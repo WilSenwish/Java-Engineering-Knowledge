@@ -33,7 +33,7 @@
 | 域3 | [03.2 微服务架构工程化](03-distributed/03.2-microservices.md) | javaguide/microservices | ✅ |
 | 域3 | [03.3 高并发方案设计精选](03-distributed/03.3-solution-design.md) | javaup/solution-design（秒杀库存 + 雪崩防护） | ✅（循环11） |
 | 域6 性能优化与架构演进 | [06.1 AI 前沿：Agent/RAG/LLM/AI编程](06-performance-ai/06.1-ai-frontier.md) | xiaolinnote 89题全部（Agent 30题 + RAG 23题 + 工具调用22题 + AI编程14题）+ 工程方法论 4 篇（Harness/Loop/Graph）+ 图解Agent/RAG万字图解 + ReAct/Multi-Agent + ClaudeCode/Codex | ✅（循环25 · 89题 + 工程方法论全部完成） |
-| 域7 业务场景与实战案例 | [07.1 实战项目案例库](07-business-cases/07.1-projects.md) | nageoffer 5项目（Ragent/oneThread/oneCoupon/12306/shortlink + 12306技术文档3篇） | ✅（循环12 深挖） |
+| 域7 业务场景与实战案例 | [07.1 实战项目案例库](07-business-cases/07.1-projects.md) | nageoffer 5项目（Ragent/oneThread/oneCoupon/12306/shortlink + 12306技术文档3篇）+ Ragent 源码级走读（945 文件类级别） | ✅（循环26 · Ragent 源码级走读完成） |
 | 域4 工程交付与云原生 | [04.1 AI 原生研发与 Coding Agent 工程化](04-delivery-cloudnative/04.1-ai-native-delivery.md) | xiaolinnote 图解ClaudeCode/Codex + oneThread | ✅（首发） |
 | 域5 生产运维与可观测性 | [05.1 生产运维与线上排查实战](05-ops-observability/05.1-troubleshooting.md) | javaguide 线上问题排查 + JDK工具总结 | ✅（首发） |
 | 域5 | [05.2 可观测性三支柱深度](05-ops-observability/05.2-observability.md) | javaup 可观测性体系/SkyWalking 源码1-3/分布式日志/系统性能监控 | ✅（循环10） |
@@ -142,6 +142,11 @@
 - **循环25（已完成 · 任务5：Agent 工程方法论）**：小林「图解 Agent 专栏 · 工程方法论」4 篇万字长文（sources/xiaolinnote/engineering/ 新建目录）→ 五段式加工：
   - 06.1 新增**模块十九：Agent 工程方法论精解（Harness Engineering · Loop Engineering · Graph Engineering）**——四代概念演进 = 一场瓶颈迁移（Prompt→Context→Harness→Loop→Graph，层层包含）；Harness 六层结构（输入侧/动作侧/校验侧三组六问）+ 五大难点五原则（重启胜过修补/生产验收分家/改环境不催模型/规则宁缺毋滥/技术债天天还）+ boring 老技术反直觉发现；Loop 五大件+磁盘记忆（自动化/worktree/skill/connector/sub-agent 写查分离 + agent 会忘 repo 不会）+ 晨间 triage loop 实战 + 内外双层循环 + 三盆冷水（验证归你/理解债/认知投降）+ 赚亏指标（每个被接受改动的成本，接受率<50% 即亏本）+ 14 步清单 + 安全四红线（skill 注入 520/17022 泄露凭证/关 verbose/权限 30 天复审）；Graph 三要素（节点只干一件事/边能写死尽量写死/状态结构化存档）+ fan-out 汇合 + 只返工失败路 + LangGraph 骨架 + Claude Code workflow 实操 + Graph Engineering vs LangGraph（设计方法 vs 实现框架）
   - 06.1 待补充清单：工程方法论 4/4 完成（同时修复两行重复），剩余大模型工程专题（Transformer/KV Cache/LoRA/MoE）
+- **循环26（已完成 · 任务6：Ragent 源码级走读）**：浅克隆 GitHub nageoffer/ragent（depth=1，945 个 Java 文件、约 11.9 万行），4 路并行源码调研（RAG 问答链 / infra-ai 模型工程化 / agent 引擎 / 工程基建+入库）：
+  - sources/nageoffer/ragent/source-walkthrough.md（新建）：类级别完整走读——双引擎 Bean 装配选择（@ConditionalOnAgentEngine）、v1 StreamChatPipeline 阶段序、SearchChannel 四实现 + orTimeout 降级、后处理 order 1-20 责任链（RRF 权重/证据闸门）、首包探测缓冲（ProbeStreamBridge 失败永不 flush = 零脏数据切换）、每模型独立三态熔断（半开单名额/取消不计失败）、Agent 工具目录+技能遮蔽 G−L+记忆三层阈值、人工确认入参从状态取、公平排队限流（Lua 原子 claim+僵尸清理+GRANTED 不释放）、8 线程池 TTL 全景、入库 Pipeline 注册表+环检测+无重试显式取舍、设计模式落地总表、12 条工程判断
+  - 07.1 新增**模块八：Ragent 源码级走读（类级别深潜）**——关键接口签名、调用链、并发降级细节、踩坑源码级对策表（14 条）、走读结论选型对比
+  - 待补充清单：Ragent 源码级拆解 → 已完成
+  - 两级索引更新：README sources 165→166、状态循环 1~26；docs/README 域7 八模块
 
 ## 五、全量完成度总览
 
@@ -152,6 +157,6 @@
 | 域3 分布式与高可用架构 | 3（03.1~03.3） | ✅ || 域4 工程交付与云原生 | 1（04.1，AI 原生方向） | ✅ 首发；传统 CI/CD·Docker·K8s 待扩充 |
 | 域5 生产运维与可观测性 | 2（05.1 + 05.2） | ✅ 监控三支柱已补全 |
 | 域6 性能优化与架构演进 | 1（06.1，十九模块） | ✅ Agent 30 题 + RAG 23 题 + 工具调用 22/22 + AI 编程 14/14 全解（89/89）+ 工程方法论 4 篇（Harness/Loop/Graph） |
-| 域7 业务场景与实战案例 | 1（07.1，七模块） | ✅ 三大业务项目深挖完成 |
+| 域7 业务场景与实战案例 | 1（07.1，八模块） | ✅ 三大业务项目深挖 + Ragent 源码级走读完成 |
 
-**后续扩充方向**（非本轮范围）：传统云原生（Docker/K8s/CI-CD）、Prometheus 多集群长期存储（Thanos/Cortex）与 SLO 错误预算、OpenTelemetry 规范、javaguide 分布式/微服务 P1 篇目、设计模式专题其余篇目（javaup sitemap 已定位 URL，待抓取）、nageoffer 牛券/12306/Link GitHub 源码级走读与 Ragent 源码级拆解、大模型工程专题（Transformer/KV Cache/LoRA/MoE）。
+**后续扩充方向**（非本轮范围）：传统云原生（Docker/K8s/CI-CD）、Prometheus 多集群长期存储（Thanos/Cortex）与 SLO 错误预算、OpenTelemetry 规范、javaguide 分布式/微服务 P1 篇目、设计模式专题其余篇目（javaup sitemap 已定位 URL，待抓取）、nageoffer 牛券/12306/Link GitHub 源码级走读、大模型工程专题（Transformer/KV Cache/LoRA/MoE）。

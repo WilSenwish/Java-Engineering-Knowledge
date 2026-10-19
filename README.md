@@ -137,6 +137,8 @@ xiaolincoding/
 nageoffer/
 ├── _index.md                                          # 5 个项目完整卡片（Ragent/oneThread/oneCoupon/12306/SaaS短链）
 ├── ragent-intro.md                                    # Ragent V2 项目介绍（7模块/生产级特性/设计模式）
+├── ragent/                                            # Ragent 源码级走读（循环26）
+│   └── source-walkthrough.md                          # 类级别深潜（945文件/11.9万行/双引擎/首包探测/三态熔断/公平限流/入库Pipeline）
 ├── onethread.md                                       # oneThread动态线程池（配置中心热更/拒绝代理/监控告警/项目结构）
 ├── onecoupon.md                                       # 牛券oneCoupon（十万QPS/34小节课程地图/七大亮点/分库分表选型）
 ├── 12306.md                                           # 12306购票（座位分配算法/分段扣减/三大误区/双版本/100+文档结构）
@@ -278,7 +280,7 @@ docs/
 ├── 06-performance-ai/
 │   └── 06.1-ai-frontier.md                    # AI前沿（6模块：Agent/RAG题库/工具调用/AI编程/RAG全链路/推理与协作模式）
 ├── 07-business-cases/
-│   └── 07.1-projects.md                       # 实战项目案例库（Ragent V2深挖 + oneThread + 牛券/12306/Link 三大项目五段式深挖）
+│   └── 07.1-projects.md                       # 实战项目案例库（Ragent V2深挖 + 源码级走读 + oneThread + 牛券/12306/Link 三大项目五段式深挖）
 ├── 04-delivery-cloudnative/
 │   └── 04.1-ai-native-delivery.md             # AI原生研发与Coding Agent工程化（六件设施/源码级设计/Starter交付范式）
 └── 05-ops-observability/
@@ -286,11 +288,11 @@ docs/
     └── 05.2-observability.md                  # 可观测性三支柱深度（体系分层/Prometheus工程化/分布式日志/SkyWalking源码/性能监控）
 ```
 
-### 状态：循环 1~25 完成 ✅
+### 状态：循环 1~26 完成 ✅
 
-- **sources/** 收集层：165 个 md（128 篇内容 + 5 站点目录），全部带溯源元信息；
+- **sources/** 收集层：166 个 md（128 篇内容 + 5 站点目录），全部带溯源元信息；
 - **docs/** 加工层：19 个 md（18 篇知识域文档 + 索引），七大知识域全部覆盖，统一五段式；
 - **远程仓库**：https://github.com/WilSenwish/Java-Engineering-Knowledge （main 分支；网络抖动时仅保本地）；
 - **循环10~12 解决的历史遗留**：域5 监控三支柱空白、设计模式换源受阻、SpringBoot 付费页空白、牛券/12306/Link 项目深挖均已补齐；
 - **循环13~25（已完成 · xiaolinnote 89 题全部加工完成 + 工程方法论 4 篇）**：Agent 30/30 + RAG 23/23 + 工具调用 22/22 + AI 编程 14/14，全部五段式并入 06.1（十九模块）；循环25 追加 Harness/Loop/Graph Engineering 工程方法论（模块十九）；
-- **后续扩充方向**（非本轮范围）：传统云原生（Docker/K8s/CI-CD）、Prometheus 多集群长期存储与 SLO、OpenTelemetry、javaup 方案设计其余 14 篇、设计模式其余两篇（factory/structural/behavioral）、nageoffer 牛券/12306/Link GitHub 源码级走读、Ragent 源码级拆解、大模型工程专题（Transformer/KV Cache/LoRA/MoE）。
+- **后续扩充方向**（非本轮范围）：传统云原生（Docker/K8s/CI-CD）、Prometheus 多集群长期存储与 SLO、OpenTelemetry、javaup 方案设计其余 14 篇、设计模式其余两篇（factory/structural/behavioral）、nageoffer 牛券/12306/Link GitHub 源码级走读、大模型工程专题（Transformer/KV Cache/LoRA/MoE）。
