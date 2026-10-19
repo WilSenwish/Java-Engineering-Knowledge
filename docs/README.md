@@ -32,7 +32,7 @@
 | 域3 分布式与高可用架构 | [03.1 分布式理论与核心方案](03-distributed/03.1-distributed-theory.md) | javaguide/distributed-system | ✅ |
 | 域3 | [03.2 微服务架构工程化](03-distributed/03.2-microservices.md) | javaguide/microservices | ✅ |
 | 域3 | [03.3 高并发方案设计精选](03-distributed/03.3-solution-design.md) | javaup/solution-design（秒杀库存 + 雪崩防护） | ✅（循环11） |
-| 域6 性能优化与架构演进 | [06.1 AI 前沿：Agent/RAG/LLM/AI编程](06-performance-ai/06.1-ai-frontier.md) | xiaolinnote 89题 + 图解Agent/RAG万字图解 + ReAct/Multi-Agent + ClaudeCode/Codex | ✅ |
+| 域6 性能优化与架构演进 | [06.1 AI 前沿：Agent/RAG/LLM/AI编程](06-performance-ai/06.1-ai-frontier.md) | xiaolinnote 89题（已精解10题）+ 图解Agent/RAG万字图解 + ReAct/Multi-Agent + ClaudeCode/Codex | ✅（循环13 推进中） |
 | 域7 业务场景与实战案例 | [07.1 实战项目案例库](07-business-cases/07.1-projects.md) | nageoffer 5项目（Ragent/oneThread/oneCoupon/12306/shortlink + 12306技术文档3篇） | ✅（循环12 深挖） |
 | 域4 工程交付与云原生 | [04.1 AI 原生研发与 Coding Agent 工程化](04-delivery-cloudnative/04.1-ai-native-delivery.md) | xiaolinnote 图解ClaudeCode/Codex + oneThread | ✅（首发） |
 | 域5 生产运维与可观测性 | [05.1 生产运维与线上排查实战](05-ops-observability/05.1-troubleshooting.md) | javaguide 线上问题排查 + JDK工具总结 | ✅（首发） |
@@ -99,6 +99,9 @@
   - 07.1 新增**模块六：12306 深挖**（座位分配五步优先级阶梯/区间三段扣减模型/ES vs Redis 组装误区/读扩散治理/雪花算法 Redis+Lua 动态分配标识位/Builder 线程池/责任链两类型与 MyBatis Interceptor）
   - 07.1 新增**模块七：Link SaaS 短链深挖**（五步原理链/短码四策略对比/SaaS 五挑战架构应答表/冷热分层/多租户隔离/PTS 压测 12k TPS·56k QPS/301 vs 302 裁决）
   - 07.1 待补充清单四项全部清零（牛券课程拆解/12306 算法/Link 架构/12306 技术文档）
+- **循环13（进行中 · 任务4：xiaolinnote 89 题逐题加工）**：Agent 面试题批次一 8 篇（题 1/2/3/4/6/7/8/9）→ 五段式加工：
+  - 06.1 新增**模块七：Agent 面试题库精解（第一批：概念·范式·拆分·记忆）**——Q1 三局限三支撑与自主闭环 / Q2 四组件工程细节（System Prompt/模型选型三要素/工具设计四原则）/ Q3 三层决策维度表 + 停止条件四机制 + Anthropic 五编排模式 / Q4·Q6 三范式与 token 量化对比 / Q7 任务拆分方法论（DAG 并行降 40-60% 延迟/原子标准/自适应拆分/验证三标准）/ Q8·Q9 记忆四层与代码级实现（Mem0/Letta/Zep/知识图谱/记忆整合/读-用-写闭环）+ 翻车点汇总表
+  - 06.1 待补充清单更新：89 题精解进度 10/89（5/10 在模块六 + 8 题在模块七）
 
 ## 五、全量完成度总览
 
