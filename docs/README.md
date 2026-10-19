@@ -34,6 +34,7 @@
 | 域7 业务场景与实战案例 | [07.1 实战项目案例库](07-business-cases/07.1-projects.md) | nageoffer 5项目 | ✅ |
 | 域4 工程交付与云原生 | [04.1 AI 原生研发与 Coding Agent 工程化](04-delivery-cloudnative/04.1-ai-native-delivery.md) | xiaolinnote 图解ClaudeCode/Codex + oneThread | ✅（首发） |
 | 域5 生产运维与可观测性 | [05.1 生产运维与线上排查实战](05-ops-observability/05.1-troubleshooting.md) | javaguide 线上问题排查 + JDK工具总结 | ✅（首发） |
+| 域5 | [05.2 可观测性三支柱深度](05-ops-observability/05.2-observability.md) | javaup 可观测性体系/SkyWalking 源码1-3/分布式日志/系统性能监控 | ✅（循环10） |
 
 ## 三、与收集层的协作规则
 
@@ -83,6 +84,9 @@
   - 01.3 模块五新增「动态线程池工程化实战」附注（oneThread 四件套 + 设计模式映射）
   - 07.1 模块三补充 oneThread 项目结构与技术栈全貌
   - 06.1 模块四新增「Coding Agent 工程化能力栈」附注
+- **循环10（已完成 · 任务1：域5 可观测性深度）**：突破 javaup hub 页 403（改用 sitemap.xml 拿全站 URL）→ 新增抓取 6 篇（微服务可观测性体系 / SkyWalking 源码 1-3 / 分布式日志架构 / 系统性能监控；Prometheus+Grafana 专篇被内容审批拦截未重试，其内容已被可观测性体系篇完整覆盖）→ 五段式加工：
+  - **新建 05.2 可观测性三支柱深度**（模块一 体系与监控分层；模块二 Prometheus 工程化：Pull/TSDB/Micrometer/PromQL/AlertManager/inhibit；模块三 分布式日志：ELK 生产架构/Kafka 削峰/Loki/ClickHouse 表设计；模块四 SkyWalking 源码级：premain/AgentClassLoader/BootService SPI/Bootstrap 注入；模块五 系统性能监控：CPU 构成/负载排查六步/线程数公式）
+  - 05.1 待补充清单联动更新
 
 ## 五、全量完成度总览
 
@@ -92,8 +96,8 @@
 | 域2 后端技术组件工程化 | 3（02.1~02.3） | ✅ |
 | 域3 分布式与高可用架构 | 2（03.1~03.2） | ✅ |
 | 域4 工程交付与云原生 | 1（04.1，AI 原生方向） | ✅ 首发；传统 CI/CD·Docker·K8s 待扩充 |
-| 域5 生产运维与可观测性 | 1（05.1） | ✅ 首发；监控三支柱深度待扩充 |
+| 域5 生产运维与可观测性 | 2（05.1 + 05.2） | ✅ 监控三支柱已补全 |
 | 域6 性能优化与架构演进 | 1（06.1，六模块） | ✅ |
 | 域7 业务场景与实战案例 | 1（07.1） | ✅ |
 
-**后续扩充方向**（非本轮范围）：传统云原生（Docker/K8s/CI-CD）、可观测性三支柱（Prometheus/OTel/ELK）、javaguide 分布式/微服务 P1 篇目、设计模式专题（换源受阻待解）。
+**后续扩充方向**（非本轮范围）：传统云原生（Docker/K8s/CI-CD）、Prometheus 多集群长期存储（Thanos/Cortex）与 SLO 错误预算、OpenTelemetry 规范、javaguide 分布式/微服务 P1 篇目、设计模式专题（javaup sitemap 已定位 URL，待抓取）。
