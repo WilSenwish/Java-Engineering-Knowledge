@@ -65,7 +65,7 @@ Java-Engineering-Knowledge/
 | javaup.chat | ✅ sitemap 全站 888 URL（hub 页 403 已绕过） | ✅ 8 篇（HashMap/ConcurrentHashMap + 可观测性6篇）+ 五段式加工（01.2/01.3/05.2/01.7/02.3/03.3） | 进行中 |
 | xiaolincoding.com | ✅ 图解网络/系统/MySQL/Redis + 24套面试题 | ✅ 21 篇（+TCP可靠性/虚拟内存/过期淘汰）+ 五段式加工（01.5/01.6/02.1/02.2） | ✅ 循环1~9 完成 |
 | nageoffer.com | ✅ 5 个项目卡片 | ✅ Ragent V2 + oneThread + 牛券/12306/Link 三大项目深挖 + 12306 技术文档 3 篇 + 五段式加工（07.1） | ✅ 循环1~12 完成 |
-| xiaolinnote.com | ✅ Agent/RAG/LLM/AI编程 89 题 | ✅ 89 题清单 + 图解Agent/RAG万字图解 + ReAct/Multi-Agent + ClaudeCode/Codex 目录 + Agent题库26题精解（1-4/5/6-9/11-14/16/22-26），五段式加工（06.1 九模块） | 进行中（89题逐题加工：26/89） |
+| xiaolinnote.com | ✅ Agent/RAG/LLM/AI编程 89 题 | ✅ 89 题清单 + 图解Agent/RAG万字图解 + ReAct/Multi-Agent + ClaudeCode/Codex 目录 + **Agent 30 题全部精解**（1-4/5/6-9/11-14/16/22-30），五段式加工（06.1 十模块） | 进行中（89题逐题加工：Agent 30/30 完成，RAG 待启动） |
 
 ### 已完成文件清单（sources/）
 
@@ -176,6 +176,10 @@ xiaolinnote/
 ├── agent/24_database_security.md                      # 题24：数据库安全（租户隔离三层/AST Allowlist/写操作两阶段审批）
 ├── agent/25_harness.md                                # 题25：Harness本质（运行支撑/循环三分支/上下文vs任务状态）
 ├── agent/26_harness_design.md                         # 题26：Harness设计（五模块/工具结果三态/对抗改断言）
+├── agent/27_self_evolution.md                         # 题27：自进化机制（三层改进位置/四步闭环/验证三件套/经验两层次）
+├── agent/28_human_confirmation.md                     # 题28：人工确认时机（澄清/审批/接管三形态/有边界许可/批准≠权限≠结果）
+├── agent/29_context_compression_threshold.md          # 题29：压缩阈值（预算公式/增长预估/触发与目标分离/缓存≠扩容）
+├── agent/30_execution_variance.md                     # 题30：执行方差（三层比较/五类差异源/最早分歧排查/分层回放）
 ├── claudecode/index.md                                # 图解Claude Code专栏目录（五方向/源码解析/工程化六件套）
 └── codex/index.md                                     # 图解Codex专栏目录（AGENTS.md/Skills/Harness架构）
 
@@ -218,9 +222,9 @@ docs/
     └── 05.2-observability.md                  # 可观测性三支柱深度（体系分层/Prometheus工程化/分布式日志/SkyWalking源码/性能监控）
 ```
 
-### 状态：循环 1~15 完成 ✅
+### 状态：循环 1~16 完成 ✅
 
-- **sources/** 收集层：98 个 md（93 篇内容 + 5 站点目录），全部带溯源元信息；
+- **sources/** 收集层：102 个 md（97 篇内容 + 5 站点目录），全部带溯源元信息；
 - **docs/** 加工层：19 个 md（18 篇知识域文档 + 索引），七大知识域全部覆盖，统一五段式；
 - **远程仓库**：https://github.com/WilSenwish/Java-Engineering-Knowledge （main 分支；网络抖动时仅保本地）；
 - **循环10~12 解决的历史遗留**：域5 监控三支柱空白、设计模式换源受阻、SpringBoot 付费页空白、牛券/12306/Link 项目深挖均已补齐；

@@ -32,7 +32,7 @@
 | 域3 分布式与高可用架构 | [03.1 分布式理论与核心方案](03-distributed/03.1-distributed-theory.md) | javaguide/distributed-system | ✅ |
 | 域3 | [03.2 微服务架构工程化](03-distributed/03.2-microservices.md) | javaguide/microservices | ✅ |
 | 域3 | [03.3 高并发方案设计精选](03-distributed/03.3-solution-design.md) | javaup/solution-design（秒杀库存 + 雪崩防护） | ✅（循环11） |
-| 域6 性能优化与架构演进 | [06.1 AI 前沿：Agent/RAG/LLM/AI编程](06-performance-ai/06.1-ai-frontier.md) | xiaolinnote 89题（已精解26题）+ 图解Agent/RAG万字图解 + ReAct/Multi-Agent + ClaudeCode/Codex | ✅（循环15 推进中） |
+| 域6 性能优化与架构演进 | [06.1 AI 前沿：Agent/RAG/LLM/AI编程](06-performance-ai/06.1-ai-frontier.md) | xiaolinnote 89题（Agent 30题全解 + RAG/LLM/编程待加工）+ 图解Agent/RAG万字图解 + ReAct/Multi-Agent + ClaudeCode/Codex | ✅（循环16 推进中） |
 | 域7 业务场景与实战案例 | [07.1 实战项目案例库](07-business-cases/07.1-projects.md) | nageoffer 5项目（Ragent/oneThread/oneCoupon/12306/shortlink + 12306技术文档3篇） | ✅（循环12 深挖） |
 | 域4 工程交付与云原生 | [04.1 AI 原生研发与 Coding Agent 工程化](04-delivery-cloudnative/04.1-ai-native-delivery.md) | xiaolinnote 图解ClaudeCode/Codex + oneThread | ✅（首发） |
 | 域5 生产运维与可观测性 | [05.1 生产运维与线上排查实战](05-ops-observability/05.1-troubleshooting.md) | javaguide 线上问题排查 + JDK工具总结 | ✅（首发） |
@@ -108,6 +108,10 @@
 - **循环15（已完成 · 任务4 批次三）**：Agent 面试题批次三 8 篇（题 12/14/16/22/23/24/25/26）→ 五段式加工：
   - 06.1 新增**模块九：Agent 面试题库精解（第三批：记忆压缩·规划·协作·容错·任务幻觉·数据库安全·Harness）**——Q12 压缩四法对比 + 阈值公式 + Prompt Caching 互补定位；Q14 CoT/ToT/GoT 演进与成本 + Plan-and-Execute/Re-planner；Q16 消息传递 vs 共享状态 + 静态/动态路由 + Handoff 防循环；Q22 通信层 vs 一致性层容错分层（fencing token 防僵尸/Integrator 最终提交权/Git 发现不了语义冲突）；Q23 三类幻觉区分 + 六态状态机 + 证据链 + 故障注入评测；Q24 租户隔离三层纵深 + AST Allowlist + 写操作两阶段审批 + 数据库文本即注入面；Q25 Harness 本质（运行停止≠任务完成/上下文 vs 任务状态分离）；Q26 五模块设计表 + 工具结果三态 + 对抗「改断言」
   - 06.1 待补充清单更新：89 题进度 26/89
+- **循环16（已完成 · 任务4 批次四：Agent 题库收官）**：Agent 面试题最后 4 篇（题 27/28/29/30）→ 五段式加工：
+  - 06.1 新增**模块十：Agent 面试题库精解（第四批：自进化·人工确认·压缩阈值·执行方差）**——Q27 自进化三层改进位置 + 四步闭环 + 验证三件套（新数据/表达变化/反例/回归）+ 经验结构两层次 + 可发布可撤回；Q28 澄清/审批/人工接管三形态 + 授权×后果判断 + 批准有边界许可 + 批准≠权限≠结果；Q29 阈值预算公式（窗口-输出-增长-余量）+ 增长预估 + 触发边界与压缩目标分离 + 缓存≠扩容；Q30 三层比较范围 + 五类差异源 + 最早可观察分歧排查 + 分层回放 + 稳定性分层定义
+  - **Agent 30 题全部加工完成（30/30）**，待补充清单转向 RAG 23 题
+  - 06.1 待补充清单更新：Agent 30/30 完成，下一批次 RAG
 
 ## 五、全量完成度总览
 
@@ -117,7 +121,7 @@
 | 域2 后端技术组件工程化 | 3（02.1~02.3） | ✅ |
 | 域3 分布式与高可用架构 | 3（03.1~03.3） | ✅ || 域4 工程交付与云原生 | 1（04.1，AI 原生方向） | ✅ 首发；传统 CI/CD·Docker·K8s 待扩充 |
 | 域5 生产运维与可观测性 | 2（05.1 + 05.2） | ✅ 监控三支柱已补全 |
-| 域6 性能优化与架构演进 | 1（06.1，九模块） | ✅ |
+| 域6 性能优化与架构演进 | 1（06.1，十模块） | ✅ Agent 30 题全解；RAG/LLM/编程题待加工 |
 | 域7 业务场景与实战案例 | 1（07.1，七模块） | ✅ 三大业务项目深挖完成 |
 
 **后续扩充方向**（非本轮范围）：传统云原生（Docker/K8s/CI-CD）、Prometheus 多集群长期存储（Thanos/Cortex）与 SLO 错误预算、OpenTelemetry 规范、javaguide 分布式/微服务 P1 篇目、设计模式专题其余篇目（javaup sitemap 已定位 URL，待抓取）、nageoffer 牛券/12306/Link GitHub 源码级走读与 Ragent 源码级拆解、xiaolinnote 89 题逐题精解。
