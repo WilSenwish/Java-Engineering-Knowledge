@@ -62,7 +62,7 @@ Java-Engineering-Knowledge/
 | 站点 | 目录抓取 | 内容沉淀 | 状态 |
 |------|----------|----------|------|
 | javaguide.cn | ✅ 13/13 板块 | ✅ 17 篇（P0 8 + 并发中/下 + Spring + MyBatis + JVM垃圾回收 + Redis数据结构 + OS面试题上 + 网络面试题上 + 线上排查 + JDK工具）+ 五段式加工（01.1~01.6、02.1~02.3、03.1~03.2、05.1） | ✅ 循环1~9 完成 |
-| javaup.chat | ✅ 6 大板块 ~250 篇 | ✅ 2 篇（HashMap 深度 + ConcurrentHashMap 线程安全）+ 五段式加工（01.2/01.3） | 进行中（hub 页 403，换入口待办） |
+| javaup.chat | ✅ sitemap 全站 888 URL（hub 页 403 已绕过） | ✅ 8 篇（HashMap/ConcurrentHashMap + 可观测性6篇）+ 五段式加工（01.2/01.3/05.2/01.7/02.3/03.3） | 进行中 |
 | xiaolincoding.com | ✅ 图解网络/系统/MySQL/Redis + 24套面试题 | ✅ 21 篇（+TCP可靠性/虚拟内存/过期淘汰）+ 五段式加工（01.5/01.6/02.1/02.2） | ✅ 循环1~9 完成 |
 | nageoffer.com | ✅ 5 个项目卡片 | ✅ Ragent V2 + oneThread 项目介绍 + 五项目五段式加工（07.1） | ✅ 循环1~9 完成 |
 | xiaolinnote.com | ✅ Agent/RAG/LLM/AI编程 89 题 | ✅ 89 题 + 图解Agent/RAG万字图解 + ReAct/Multi-Agent + ClaudeCode/Codex 目录，五段式加工（06.1/04.1） | ✅ 循环1~9 完成 |
@@ -91,7 +91,23 @@ javaguide/
 javaup/
 ├── _index.md                                          # 站点完整目录（6 板块 ~250 篇 + 7 实战项目）
 ├── java-collection/hashmap-core-principles.md         # HashMap核心原理与数据结构
-└── java-collection/concurrenthashmap-thread-safety.md # ConcurrentHashMap线程安全机制
+├── java-collection/concurrenthashmap-thread-safety.md # ConcurrentHashMap线程安全机制
+├── observability/                                     # 可观测性系列（循环10）
+│   ├── microservice-observability.md                  # 微服务可观测性与监控体系（三支柱/Prometheus/告警/SkyWalking接入）
+│   ├── skywalking-source-part-01.md                   # SkyWalking源码解析1：premain入口
+│   ├── skywalking-source-part-02.md                   # SkyWalking源码解析2：配置与AgentClassLoader
+│   ├── skywalking-source-part-03.md                   # SkyWalking源码解析3：BootService SPI
+│   ├── distributed-logging.md                         # 分布式日志系统架构（ELK/Loki/ClickHouse）
+│   └── system-performance-monitoring.md               # 系统性能监控（CPU/负载/排查六步）
+├── design-pattern/                                    # 设计模式（循环11，换源成功）
+│   ├── overview-and-principles.md                     # 设计模式总览与SOLID七原则
+│   └── singleton-pattern.md                           # 单例模式深度（五写法/破坏与防护）
+├── concurrent-multithreading/
+│   └── synchronized-lock-upgrade.md                   # Synchronized锁升级（MarkWord四态/JIT优化）
+├── framework/springboot-auto-configuration.md         # SpringBoot自动配置原理
+└── solution-design/                                   # 方案设计（循环11）
+    ├── flash-sale-inventory.md                        # 秒杀系统架构与库存扣减（页面动态加载仅获静态部分）
+    └── high-availability-avalanche-protection.md      # 高可用雪崩防护（页面动态加载仅获静态部分）
 
 xiaolincoding/
 ├── _index.md                                          # 站点完整目录（图解网络/系统/MySQL/Redis + 24套面试题）
@@ -147,17 +163,19 @@ docs/
 ├── 01-java-core/                              # 域1 Java核心与编码工程化
 │   ├── 01.1-java-basics.md                    # Java基础与语法工程化（3模块×五段式）
 │   ├── 01.2-collections.md                    # 集合工程化（5模块：框架/List/HashMap/Queue/ConcurrentHashMap）
-│   ├── 01.3-concurrency.md                    # 并发编程（7模块：线程基础/协作/死锁/JMM与锁/线程池/ThreadLocal/AQS）
+│   ├── 01.3-concurrency.md                    # 并发编程（8模块：线程基础/协作/死锁/JMM与锁/线程池/ThreadLocal/AQS/Synchronized锁升级）
 │   ├── 01.4-jvm.md                            # JVM内核与线上排查（5模块，含垃圾回收深度/收集器选型）
 │   ├── 01.5-network-tcp.md                    # 计算机网络（5模块：TCP/可靠性全参数/TCP与UDP/HTTP·HTTPS/I/O多路复用/体系结构）
-│   └── 01.6-os-fundamentals.md                # 操作系统基础（3模块：内核态与系统调用/进程线程模型/内存管理虚拟内存）
+│   ├── 01.6-os-fundamentals.md                # 操作系统基础（3模块：内核态与系统调用/进程线程模型/内存管理虚拟内存）
+│   └── 01.7-design-patterns.md                # 设计模式与编码工程化（SOLID七原则 + 单例五写法/破坏防护）
 ├── 02-backend-components/                     # 域2 后端技术组件工程化
 │   ├── 02.1-mysql.md                          # MySQL工程化（11模块：…/锁体系/三大日志/BufferPool/SQL执行全链路）
 │   ├── 02.2-redis.md                          # Redis工程化（14模块：…/哨兵/分布式锁/大Key治理/Redis Cluster/过期淘汰）
-│   └── 02.3-spring-mybatis.md                 # Spring & MyBatis 工程化（5模块：IoC/AOP/事务/MVC/MyBatis）
+│   └── 02.3-spring-mybatis.md                 # Spring & MyBatis 工程化（6模块：IoC/AOP/事务/MVC/MyBatis/SpringBoot自动配置）
 ├── 03-distributed/                            # 域3 分布式与高可用架构
 │   ├── 03.1-distributed-theory.md             # 分布式理论与核心方案（CAP/BASE、RPC、ID锁事务）
-│   └── 03.2-microservices.md                  # 微服务架构工程化（拆分/治理/一致性/稳定性）
+│   ├── 03.2-microservices.md                  # 微服务架构工程化（拆分/治理/一致性/稳定性）
+│   └── 03.3-solution-design.md                # 高并发方案设计精选（秒杀五层过滤+库存矩阵/雪崩防护四层矩阵）
 ├── 06-performance-ai/
 │   └── 06.1-ai-frontier.md                    # AI前沿（6模块：Agent/RAG题库/工具调用/AI编程/RAG全链路/推理与协作模式）
 ├── 07-business-cases/
@@ -165,12 +183,14 @@ docs/
 ├── 04-delivery-cloudnative/
 │   └── 04.1-ai-native-delivery.md             # AI原生研发与Coding Agent工程化（六件设施/源码级设计/Starter交付范式）
 └── 05-ops-observability/
-    └── 05.1-troubleshooting.md                # 生产运维与线上排查实战（现象速查表/止血留证/全场景SOP/工具矩阵）
+    ├── 05.1-troubleshooting.md                # 生产运维与线上排查实战（现象速查表/止血留证/全场景SOP/工具矩阵）
+    └── 05.2-observability.md                  # 可观测性三支柱深度（体系分层/Prometheus工程化/分布式日志/SkyWalking源码/性能监控）
 ```
 
-### 状态：循环 1~9 全部完成 ✅
+### 状态：循环 1~11 完成 ✅
 
-- **sources/** 收集层：56 个 md（51 篇内容 + 5 站点目录），全部带溯源元信息；
-- **docs/** 加工层：16 个 md（15 篇知识域文档 + 索引），七大知识域全部有首发文档，统一五段式；
-- **远程仓库**：https://github.com/WilSenwish/Java-Engineering-Knowledge （main 分支，本地提交 9 个循环提交；网络抖动时仅保本地）；
-- **后续扩充方向**（非本轮范围）：传统云原生（Docker/K8s/CI-CD）、可观测性三支柱深度（Prometheus/OTel/ELK）、javaguide 分布式/微服务 P1 篇目、设计模式专题（换源受阻待解）。
+- **sources/** 收集层：68 个 md（63 篇内容 + 5 站点目录），全部带溯源元信息；
+- **docs/** 加工层：20 个 md（19 篇知识域文档 + 索引），七大知识域全部覆盖，统一五段式；
+- **远程仓库**：https://github.com/WilSenwish/Java-Engineering-Knowledge （main 分支；网络抖动时仅保本地）；
+- **循环10/11 解决的历史遗留**：域5 监控三支柱空白、设计模式换源受阻、SpringBoot 付费页空白均已补齐；
+- **后续扩充方向**（非本轮范围）：传统云原生（Docker/K8s/CI-CD）、Prometheus 多集群长期存储与 SLO、OpenTelemetry、javaup 方案设计其余 14 篇、设计模式其余两篇（factory/structural/behavioral）、nageoffer 牛券/12306/Link 项目深挖、xiaolinnote 89 题逐题精解。

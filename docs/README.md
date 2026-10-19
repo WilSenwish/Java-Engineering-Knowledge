@@ -21,15 +21,17 @@
 |--------|------|----------------------|------|
 | 域1 Java核心与编码工程化 | [01.1 Java 基础与语法工程化](01-java-core/01.1-java-basics.md) | javaguide/java-basis | ✅ |
 | 域1 | [01.2 Java 集合工程化（含 HashMap/ConcurrentHashMap 深度）](01-java-core/01.2-collections.md) | javaguide/java-collection + javaup/hashmap + javaup/concurrenthashmap | ✅ |
-| 域1 | [01.3 Java 并发编程工程化](01-java-core/01.3-concurrency.md) | javaguide/java-concurrent 上+中+下 | ✅ |
+| 域1 | [01.3 Java 并发编程工程化](01-java-core/01.3-concurrency.md) | javaguide/java-concurrent 上+中+下 + javaup/synchronized锁升级 | ✅ |
 | 域1 | [01.4 JVM 内核与线上排查](01-java-core/01.4-jvm.md) | javaguide/java-jvm | ✅ |
 | 域1（计算机基础） | [01.5 计算机网络 · TCP/HTTP/I/O 多路复用/体系结构](01-java-core/01.5-network-tcp.md) | xiaolincoding/tcp + http + IO多路复用 + tcp可靠性 + 网络体系 | ✅ |
 | 域1（计算机基础） | [01.6 操作系统基础与进程线程模型](01-java-core/01.6-os-fundamentals.md) | javaguide/os-questions-01 + 小林虚拟内存 | ✅ |
+| 域1 | [01.7 设计模式与编码工程化](01-java-core/01.7-design-patterns.md) | javaup/design-pattern（总览原则 + 单例深度） | ✅（循环11） |
 | 域2 后端技术组件工程化 | [02.1 MySQL 工程化](02-backend-components/02.1-mysql.md) | javaguide/mysql + 小林index/mvcc/索引失效/锁/日志/BufferPool/SQL执行链路 | ✅ |
 | 域2 | [02.2 Redis 工程化](02-backend-components/02.2-redis.md) | javaguide/redis 上+下 + 小林AOF/RDB/缓存三难题/主从/一致性/哨兵/Redlock/大Key/Cluster/过期淘汰 | ✅ |
-| 域2 | [02.3 Spring & MyBatis 工程化](02-backend-components/02.3-spring-mybatis.md) | javaguide/system-design（Spring+MyBatis） | ✅ |
+| 域2 | [02.3 Spring & MyBatis 工程化](02-backend-components/02.3-spring-mybatis.md) | javaguide/Spring+MyBatis + javaup/SpringBoot自动配置 | ✅ |
 | 域3 分布式与高可用架构 | [03.1 分布式理论与核心方案](03-distributed/03.1-distributed-theory.md) | javaguide/distributed-system | ✅ |
 | 域3 | [03.2 微服务架构工程化](03-distributed/03.2-microservices.md) | javaguide/microservices | ✅ |
+| 域3 | [03.3 高并发方案设计精选](03-distributed/03.3-solution-design.md) | javaup/solution-design（秒杀库存 + 雪崩防护） | ✅（循环11） |
 | 域6 性能优化与架构演进 | [06.1 AI 前沿：Agent/RAG/LLM/AI编程](06-performance-ai/06.1-ai-frontier.md) | xiaolinnote 89题 + 图解Agent/RAG万字图解 + ReAct/Multi-Agent + ClaudeCode/Codex | ✅ |
 | 域7 业务场景与实战案例 | [07.1 实战项目案例库](07-business-cases/07.1-projects.md) | nageoffer 5项目 | ✅ |
 | 域4 工程交付与云原生 | [04.1 AI 原生研发与 Coding Agent 工程化](04-delivery-cloudnative/04.1-ai-native-delivery.md) | xiaolinnote 图解ClaudeCode/Codex + oneThread | ✅（首发） |
@@ -87,14 +89,19 @@
 - **循环10（已完成 · 任务1：域5 可观测性深度）**：突破 javaup hub 页 403（改用 sitemap.xml 拿全站 URL）→ 新增抓取 6 篇（微服务可观测性体系 / SkyWalking 源码 1-3 / 分布式日志架构 / 系统性能监控；Prometheus+Grafana 专篇被内容审批拦截未重试，其内容已被可观测性体系篇完整覆盖）→ 五段式加工：
   - **新建 05.2 可观测性三支柱深度**（模块一 体系与监控分层；模块二 Prometheus 工程化：Pull/TSDB/Micrometer/PromQL/AlertManager/inhibit；模块三 分布式日志：ELK 生产架构/Kafka 削峰/Loki/ClickHouse 表设计；模块四 SkyWalking 源码级：premain/AgentClassLoader/BootService SPI/Bootstrap 注入；模块五 系统性能监控：CPU 构成/负载排查六步/线程数公式）
   - 05.1 待补充清单联动更新
+- **循环11（已完成 · 任务2：javaup 内容抓取）**：sitemap 定位 URL 后新增抓取 6 篇（设计模式总览与原则 / 单例模式深度 / Synchronized 锁升级 / SpringBoot 自动配置 / 秒杀库存方案 / 雪崩防护方案；后两篇页面为动态加载仅获静态部分，已标注并以站内文档交叉补全）→ 五段式加工：
+  - **新建 01.7 设计模式与编码工程化**（SOLID 七原则裁决序 + 单例五写法对比表 + 反射/序列化双破坏防护）——**解决循环6 以来"设计模式换源受阻"历史遗留**
+  - 01.3 新增**模块八：Synchronized 锁升级与 JIT 锁优化**（Mark Word 四态/单向升级/偏向锁 JDK15 废弃史/锁消除粗化/无降级真相）
+  - 02.3 新增**模块六：SpringBoot 自动配置原理**（ImportSelector 链/imports 文件演变与云原生动机/条件装配/覆盖与排除/自定义 starter）——**解决循环4 以来"javaguide SpringBoot 付费页"历史遗留**
+  - **新建 03.3 高并发方案设计精选**（秒杀五层过滤+热点三板斧+扣减方案矩阵；雪崩传导链+防护四层矩阵+Chaos Engineering）
 
 ## 五、全量完成度总览
 
 | 知识域 | 文档数 | 状态 |
 |--------|--------|------|
-| 域1 Java核心与编码工程化 | 6（01.1~01.6） | ✅ |
+| 域1 Java核心与编码工程化 | 7（01.1~01.7） | ✅ |
 | 域2 后端技术组件工程化 | 3（02.1~02.3） | ✅ |
-| 域3 分布式与高可用架构 | 2（03.1~03.2） | ✅ |
+| 域3 分布式与高可用架构 | 3（03.1~03.3） | ✅ |
 | 域4 工程交付与云原生 | 1（04.1，AI 原生方向） | ✅ 首发；传统 CI/CD·Docker·K8s 待扩充 |
 | 域5 生产运维与可观测性 | 2（05.1 + 05.2） | ✅ 监控三支柱已补全 |
 | 域6 性能优化与架构演进 | 1（06.1，六模块） | ✅ |
