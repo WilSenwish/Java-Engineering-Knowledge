@@ -190,7 +190,7 @@ docs/
 ### 状态：循环 1~11 完成 ✅
 
 - **sources/** 收集层：68 个 md（63 篇内容 + 5 站点目录），全部带溯源元信息；
-- **docs/** 加工层：20 个 md（19 篇知识域文档 + 索引），七大知识域全部覆盖，统一五段式；
+- **docs/** 加工层：19 个 md（18 篇知识域文档 + 索引），七大知识域全部覆盖，统一五段式；
 - **远程仓库**：https://github.com/WilSenwish/Java-Engineering-Knowledge （main 分支；网络抖动时仅保本地）；
 - **循环10/11 解决的历史遗留**：域5 监控三支柱空白、设计模式换源受阻、SpringBoot 付费页空白均已补齐；
 - **后续扩充方向**（非本轮范围）：传统云原生（Docker/K8s/CI-CD）、Prometheus 多集群长期存储与 SLO、OpenTelemetry、javaup 方案设计其余 14 篇、设计模式其余两篇（factory/structural/behavioral）、nageoffer 牛券/12306/Link 项目深挖、xiaolinnote 89 题逐题精解。
