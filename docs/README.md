@@ -32,7 +32,7 @@
 | 域3 分布式与高可用架构 | [03.1 分布式理论与核心方案](03-distributed/03.1-distributed-theory.md) | javaguide/distributed-system | ✅ |
 | 域3 | [03.2 微服务架构工程化](03-distributed/03.2-microservices.md) | javaguide/microservices | ✅ |
 | 域3 | [03.3 高并发方案设计精选](03-distributed/03.3-solution-design.md) | javaup/solution-design（秒杀库存 + 雪崩防护） | ✅（循环11） |
-| 域6 性能优化与架构演进 | [06.1 AI 前沿：Agent/RAG/LLM/AI编程](06-performance-ai/06.1-ai-frontier.md) | xiaolinnote 89题（Agent 30题 + RAG 23题 + 工具调用22题全解 + AI编程8题）+ 图解Agent/RAG万字图解 + ReAct/Multi-Agent + ClaudeCode/Codex | ✅（循环23 推进中） |
+| 域6 性能优化与架构演进 | [06.1 AI 前沿：Agent/RAG/LLM/AI编程](06-performance-ai/06.1-ai-frontier.md) | xiaolinnote 89题全部（Agent 30题 + RAG 23题 + 工具调用22题 + AI编程14题）+ 图解Agent/RAG万字图解 + ReAct/Multi-Agent + ClaudeCode/Codex | ✅（循环24 · 89题全部完成） |
 | 域7 业务场景与实战案例 | [07.1 实战项目案例库](07-business-cases/07.1-projects.md) | nageoffer 5项目（Ragent/oneThread/oneCoupon/12306/shortlink + 12306技术文档3篇） | ✅（循环12 深挖） |
 | 域4 工程交付与云原生 | [04.1 AI 原生研发与 Coding Agent 工程化](04-delivery-cloudnative/04.1-ai-native-delivery.md) | xiaolinnote 图解ClaudeCode/Codex + oneThread | ✅（首发） |
 | 域5 生产运维与可观测性 | [05.1 生产运维与线上排查实战](05-ops-observability/05.1-troubleshooting.md) | javaguide 线上问题排查 + JDK工具总结 | ✅（首发） |
@@ -135,6 +135,10 @@
 - **循环23（已完成 · 任务4 批次十一：AI 编程题库启动）**：AI 编程面试题批次一 8 篇（题 1/2/3/4/5/6/7/8）→ 五段式加工：
   - 06.1 新增**模块十七：AI 编程面试题库精解（第一批：编程方式·需求描述·上下文·定位·范式·拆分·质量·审查）**——Q1 三方式按「AI 行动能力 + 谁推进下一步」分 + 判错维度（长度/界面/单次调用分不清）；Q2 五段式需求描述（目标现状/输入输出/约束偏好分离/验收编码前推导）+ 未知信息分类；Q3 按任务选上下文 + 「打开仓库≠已读」+ 来源版本核对；Q4 定位五步（锚点→缩范围→三类工具→沿关系→确认运行路径）；Q5 Vibe vs Spec（spec/plan/tasks 三件套 + Spec Kit/OpenSpec Skill 链）；Q6 拆分（行为优先/粒度可验证/依赖并行/tasks.md 维护）；Q7 质量（验收契约 + 测试 Oracle + 分层检查 + Diff 审查）；Q8 审查（Diff→行为问题→反例核验→测试也要审→意见格式）
   - 06.1 待补充清单更新：AI 编程进度 8/14
+- **循环24（已完成 · 任务4 批次十二：AI 编程题库收官 · xiaolinnote 89 题全部完成）**：AI 编程面试题最后 6 篇（题 9/10/11/12/13/14）→ 五段式加工：
+  - 06.1 新增**模块十八：AI 编程面试题库精解（第二批：AI 排障·测试覆盖·上下文·过期描述·会话交接·权限边界）**——Q9 排障（三类证据/追数据来源/候选假设区分/按约定修复/回归旧实现失败）；Q10 测试覆盖（规则推导场景/Oracle 独立/触发有效性/错误注入与变异测试）；Q11 上下文管理（状态摘要/代码已修改 vs 行为已验证/文件存在≠已读过）；Q12 过期描述（来源四要素+指纹/依赖传播/先失效后重建/上下文旧结论显式纠正）；Q13 跨会话交接（HANDOFF.md 模板/工作区核对/命令按效果分类防重放）；Q14 权限边界（任务授权/工具能力/执行隔离三层/策略示意/外部内容≠授权/自主与确认平衡）
+  - **AI 编程 14 题全部加工完成（14/14）——xiaolinnote 89 题全部完成（89/89）**：Agent 30 + RAG 23 + 工具调用 22 + AI 编程 14
+  - 06.1 待补充清单：89 题全部完成标注，剩余 Harness/Loop/Graph Engineering 方法论与大模型工程专题
 
 ## 五、全量完成度总览
 
@@ -144,7 +148,7 @@
 | 域2 后端技术组件工程化 | 3（02.1~02.3） | ✅ |
 | 域3 分布式与高可用架构 | 3（03.1~03.3） | ✅ || 域4 工程交付与云原生 | 1（04.1，AI 原生方向） | ✅ 首发；传统 CI/CD·Docker·K8s 待扩充 |
 | 域5 生产运维与可观测性 | 2（05.1 + 05.2） | ✅ 监控三支柱已补全 |
-| 域6 性能优化与架构演进 | 1（06.1，十七模块） | ✅ Agent 30 题 + RAG 23 题 + 工具调用 22/22 全解 + AI 编程 8/14；编程题加工中 |
+| 域6 性能优化与架构演进 | 1（06.1，十八模块） | ✅ Agent 30 题 + RAG 23 题 + 工具调用 22/22 + AI 编程 14/14 全解（89/89 完成） |
 | 域7 业务场景与实战案例 | 1（07.1，七模块） | ✅ 三大业务项目深挖完成 |
 
-**后续扩充方向**（非本轮范围）：传统云原生（Docker/K8s/CI-CD）、Prometheus 多集群长期存储（Thanos/Cortex）与 SLO 错误预算、OpenTelemetry 规范、javaguide 分布式/微服务 P1 篇目、设计模式专题其余篇目（javaup sitemap 已定位 URL，待抓取）、nageoffer 牛券/12306/Link GitHub 源码级走读与 Ragent 源码级拆解、xiaolinnote 89 题逐题精解。
+**后续扩充方向**（非本轮范围）：传统云原生（Docker/K8s/CI-CD）、Prometheus 多集群长期存储（Thanos/Cortex）与 SLO 错误预算、OpenTelemetry 规范、javaguide 分布式/微服务 P1 篇目、设计模式专题其余篇目（javaup sitemap 已定位 URL，待抓取）、nageoffer 牛券/12306/Link GitHub 源码级走读与 Ragent 源码级拆解、xiaolinnote Harness/Loop/Graph Engineering 工程方法论与大模型工程专题（Transformer/KV Cache/LoRA/MoE）。
