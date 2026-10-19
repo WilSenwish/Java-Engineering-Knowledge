@@ -65,7 +65,7 @@ Java-Engineering-Knowledge/
 | javaup.chat | ✅ sitemap 全站 888 URL（hub 页 403 已绕过） | ✅ 8 篇（HashMap/ConcurrentHashMap + 可观测性6篇）+ 五段式加工（01.2/01.3/05.2/01.7/02.3/03.3） | 进行中 |
 | xiaolincoding.com | ✅ 图解网络/系统/MySQL/Redis + 24套面试题 | ✅ 21 篇（+TCP可靠性/虚拟内存/过期淘汰）+ 五段式加工（01.5/01.6/02.1/02.2） | ✅ 循环1~9 完成 |
 | nageoffer.com | ✅ 5 个项目卡片 | ✅ Ragent V2 + oneThread + 牛券/12306/Link 三大项目深挖 + 12306 技术文档 3 篇 + 五段式加工（07.1） | ✅ 循环1~12 完成 |
-| xiaolinnote.com | ✅ Agent/RAG/LLM/AI编程 89 题 | ✅ 89 题清单 + 图解Agent/RAG万字图解 + ReAct/Multi-Agent + ClaudeCode/Codex 目录 + **Agent 30 题 + RAG 23 题全部精解**（1-30/1-23）+ 工具调用题库 16 题精解（1-16），五段式加工（06.1 十五模块） | 进行中（89题逐题加工：Agent 30/30 + RAG 23/23 完成，工具调用 16/22） |
+| xiaolinnote.com | ✅ Agent/RAG/LLM/AI编程 89 题 | ✅ 89 题清单 + 图解Agent/RAG万字图解 + ReAct/Multi-Agent + ClaudeCode/Codex 目录 + **Agent 30 题 + RAG 23 题 + 工具调用 22 题全部精解**（1-30/1-23/1-22），五段式加工（06.1 十六模块） | 进行中（89题逐题加工：Agent 30/30 + RAG 23/23 + 工具调用 22/22 完成，AI 编程 14 题待启动） |
 
 ### 已完成文件清单（sources/）
 
@@ -219,6 +219,12 @@ xiaolinnote/
 ├── tools/14_sse_vs_websocket.md                       # 题14：SSE vs WebSocket（文字流式标准/全双工/局限对比）
 ├── tools/15_webrtc_vs_ws.md                           # 题15：WebRTC vs WebSocket（UDP低延迟/NAT穿透/信令通道/OpenAI选型）
 ├── tools/16_llm_gateway.md                             # 题16：LLM网关（六大能力/语义缓存/五产品选型）
+├── tools/17_tool_routing.md                            # 题17：Tool Routing（五步链路/先鉴权再召回/召回精选分层/评估与兜底）
+├── tools/18_tool_reliability.md                        # 题18：工具容错（五阶段/故障分类/三道门/幂等键/Checkpoint/熔断降级）
+├── tools/19_cli_packaging.md                           # 题19：CLI封装（能力vs入口/三层结构/机器契约/退出码三层判断）
+├── tools/20_cli_vs_mcp.md                              # 题20：CLI vs MCP（入口vs协议/可组合/选型判断表/MCP包装CLI）
+├── tools/21_execution_sandbox.md                       # 题21：代码沙箱（最小能力/资源预算cgroup/容器vs虚拟机/运行器生命周期）
+├── tools/22_skill_loading.md                           # 题22：Skill加载（渐进式三层/元数据目录/正文激活/资源按需/四检查）
 ├── claudecode/index.md                                # 图解Claude Code专栏目录（五方向/源码解析/工程化六件套）
 └── codex/index.md                                     # 图解Codex专栏目录（AGENTS.md/Skills/Harness架构）
 
@@ -261,11 +267,11 @@ docs/
     └── 05.2-observability.md                  # 可观测性三支柱深度（体系分层/Prometheus工程化/分布式日志/SkyWalking源码/性能监控）
 ```
 
-### 状态：循环 1~21 完成 ✅
+### 状态：循环 1~22 完成 ✅
 
-- **sources/** 收集层：141 个 md（128 篇内容 + 5 站点目录），全部带溯源元信息；
+- **sources/** 收集层：147 个 md（128 篇内容 + 5 站点目录），全部带溯源元信息；
 - **docs/** 加工层：19 个 md（18 篇知识域文档 + 索引），七大知识域全部覆盖，统一五段式；
 - **远程仓库**：https://github.com/WilSenwish/Java-Engineering-Knowledge （main 分支；网络抖动时仅保本地）；
 - **循环10~12 解决的历史遗留**：域5 监控三支柱空白、设计模式换源受阻、SpringBoot 付费页空白、牛券/12306/Link 项目深挖均已补齐；
-- **循环13~21 进行中**：xiaolinnote 89 题逐题加工——Agent 30/30 + RAG 23/23 完成，工具调用 16/22，AI 编程 14 题待启动；
+- **循环13~22 进行中**：xiaolinnote 89 题逐题加工——Agent 30/30 + RAG 23/23 + 工具调用 22/22 完成，AI 编程 14 题待启动；
 - **后续扩充方向**（非本轮范围）：传统云原生（Docker/K8s/CI-CD）、Prometheus 多集群长期存储与 SLO、OpenTelemetry、javaup 方案设计其余 14 篇、设计模式其余两篇（factory/structural/behavioral）、nageoffer 牛券/12306/Link GitHub 源码级走读、Ragent 源码级拆解、xiaolinnote 89 题逐题精解。
