@@ -65,7 +65,7 @@ Java-Engineering-Knowledge/
 | javaup.chat | ✅ sitemap 全站 888 URL（hub 页 403 已绕过） | ✅ 8 篇（HashMap/ConcurrentHashMap + 可观测性6篇）+ 五段式加工（01.2/01.3/05.2/01.7/02.3/03.3） | 进行中 |
 | xiaolincoding.com | ✅ 图解网络/系统/MySQL/Redis + 24套面试题 | ✅ 21 篇（+TCP可靠性/虚拟内存/过期淘汰）+ 五段式加工（01.5/01.6/02.1/02.2） | ✅ 循环1~9 完成 |
 | nageoffer.com | ✅ 5 个项目卡片 | ✅ Ragent V2 + oneThread + 牛券/12306/Link 三大项目深挖 + 12306 技术文档 3 篇 + 五段式加工（07.1） | ✅ 循环1~12 完成 |
-| xiaolinnote.com | ✅ Agent/RAG/LLM/AI编程 89 题 | ✅ 89 题清单 + 图解Agent/RAG万字图解 + ReAct/Multi-Agent + ClaudeCode/Codex 目录 + **Agent 30 题 + RAG 23 题全部精解**（1-30/1-23），五段式加工（06.1 十三模块） | 进行中（89题逐题加工：Agent 30/30 + RAG 23/23 完成，LLM工具调用待启动） |
+| xiaolinnote.com | ✅ Agent/RAG/LLM/AI编程 89 题 | ✅ 89 题清单 + 图解Agent/RAG万字图解 + ReAct/Multi-Agent + ClaudeCode/Codex 目录 + **Agent 30 题 + RAG 23 题全部精解**（1-30/1-23）+ 工具调用题库 8 题精解（1-8），五段式加工（06.1 十四模块） | 进行中（89题逐题加工：Agent 30/30 + RAG 23/23 完成，工具调用 8/22） |
 
 ### 已完成文件清单（sources/）
 
@@ -203,6 +203,14 @@ xiaolinnote/
 ├── rag/21_knowledge_conflict.md                       # 题21：知识冲突裁决（先适用再权威/元数据身份证/治理闭环）
 ├── rag/22_rag_long_context.md                         # 题22：长上下文vs RAG（容量≠有效利用/检索缩范围+大窗口阅读）
 ├── rag/23_rag_vs_file_search.md                       # 题23：RAG vs Agent文件检索（两维度/索引定位+自主探索组合）
+├── tools/1_function_calling.md                        # 题1：Function Calling本质（结构化JSON/两轮对话/模型决策代码执行）
+├── tools/2_llm_tool_learning.md                       # 题2：LLM学会调工具（SFT教怎么调/RLHF教何时调/运行时机制）
+├── tools/3_fc_training.md                             # 题3：FC能力训练（五场景数据/PPO与KL约束/RLAIF/两阶段分工）
+├── tools/4_what_is_mcp.md                             # 题4：MCP核心内容（三角色/三类能力/JSON-RPC/调用链路/安全）
+├── tools/5_mcp_components.md                          # 题5：MCP三层组成（角色/能力/协议/Streamable HTTP演进）
+├── tools/6_mcp_vs_fc.md                               # 题6：MCP vs FC（层次关系/MCP底层靠FC驱动/实操接入）
+├── tools/7_fc_vs_mcp_usage.md                         # 题7：FC vs MCP选型（内嵌vs独立/五步判断流程）
+├── tools/8_reasoning_no_mcp.md                        # 题8：推理模型不支持MCP（范式冲突三层原因/思考后调用解法）
 ├── claudecode/index.md                                # 图解Claude Code专栏目录（五方向/源码解析/工程化六件套）
 └── codex/index.md                                     # 图解Codex专栏目录（AGENTS.md/Skills/Harness架构）
 
@@ -245,9 +253,9 @@ docs/
     └── 05.2-observability.md                  # 可观测性三支柱深度（体系分层/Prometheus工程化/分布式日志/SkyWalking源码/性能监控）
 ```
 
-### 状态：循环 1~19 完成 ✅
+### 状态：循环 1~20 完成 ✅
 
-- **sources/** 收集层：125 个 md（120 篇内容 + 5 站点目录），全部带溯源元信息；
+- **sources/** 收集层：133 个 md（128 篇内容 + 5 站点目录），全部带溯源元信息；
 - **docs/** 加工层：19 个 md（18 篇知识域文档 + 索引），七大知识域全部覆盖，统一五段式；
 - **远程仓库**：https://github.com/WilSenwish/Java-Engineering-Knowledge （main 分支；网络抖动时仅保本地）；
 - **循环10~12 解决的历史遗留**：域5 监控三支柱空白、设计模式换源受阻、SpringBoot 付费页空白、牛券/12306/Link 项目深挖均已补齐；
