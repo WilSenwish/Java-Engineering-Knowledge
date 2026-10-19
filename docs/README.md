@@ -32,7 +32,7 @@
 | 域3 分布式与高可用架构 | [03.1 分布式理论与核心方案](03-distributed/03.1-distributed-theory.md) | javaguide/distributed-system | ✅ |
 | 域3 | [03.2 微服务架构工程化](03-distributed/03.2-microservices.md) | javaguide/microservices | ✅ |
 | 域3 | [03.3 高并发方案设计精选](03-distributed/03.3-solution-design.md) | javaup/solution-design（秒杀库存 + 雪崩防护） | ✅（循环11） |
-| 域6 性能优化与架构演进 | [06.1 AI 前沿：Agent/RAG/LLM/AI编程](06-performance-ai/06.1-ai-frontier.md) | xiaolinnote 89题（已精解18题）+ 图解Agent/RAG万字图解 + ReAct/Multi-Agent + ClaudeCode/Codex | ✅（循环14 推进中） |
+| 域6 性能优化与架构演进 | [06.1 AI 前沿：Agent/RAG/LLM/AI编程](06-performance-ai/06.1-ai-frontier.md) | xiaolinnote 89题（已精解26题）+ 图解Agent/RAG万字图解 + ReAct/Multi-Agent + ClaudeCode/Codex | ✅（循环15 推进中） |
 | 域7 业务场景与实战案例 | [07.1 实战项目案例库](07-business-cases/07.1-projects.md) | nageoffer 5项目（Ragent/oneThread/oneCoupon/12306/shortlink + 12306技术文档3篇） | ✅（循环12 深挖） |
 | 域4 工程交付与云原生 | [04.1 AI 原生研发与 Coding Agent 工程化](04-delivery-cloudnative/04.1-ai-native-delivery.md) | xiaolinnote 图解ClaudeCode/Codex + oneThread | ✅（首发） |
 | 域5 生产运维与可观测性 | [05.1 生产运维与线上排查实战](05-ops-observability/05.1-troubleshooting.md) | javaguide 线上问题排查 + JDK工具总结 | ✅（首发） |
@@ -102,9 +102,12 @@
 - **循环13（进行中 · 任务4：xiaolinnote 89 题逐题加工）**：Agent 面试题批次一 8 篇（题 1/2/3/4/6/7/8/9）→ 五段式加工：
   - 06.1 新增**模块七：Agent 面试题库精解（第一批：概念·范式·拆分·记忆）**——Q1 三局限三支撑与自主闭环 / Q2 四组件工程细节（System Prompt/模型选型三要素/工具设计四原则）/ Q3 三层决策维度表 + 停止条件四机制 + Anthropic 五编排模式 / Q4·Q6 三范式与 token 量化对比 / Q7 任务拆分方法论（DAG 并行降 40-60% 延迟/原子标准/自适应拆分/验证三标准）/ Q8·Q9 记忆四层与代码级实现（Mem0/Letta/Zep/知识图谱/记忆整合/读-用-写闭环）+ 翻车点汇总表
   - 06.1 待补充清单更新：89 题精解进度 10/89（5/10 在模块六 + 8 题在模块七）
-- **循环14（进行中 · 任务4 批次二）**：Agent 面试题批次二 8 篇（题 11/13/15/17/18/19/20/21）→ 五段式加工：
+- **循环14（已完成 · 任务4 批次二）**：Agent 面试题批次二 8 篇（题 11/13/15/17/18/19/20/21）→ 五段式加工：
   - 06.1 新增**模块八：Agent 面试题库精解（第二批：选型·框架·反思·上下文·状态·评测·稳定性·Trace）**——Q11 Single/Multi 选型三类场景 + Orchestrator 三变体 + 渐进演进；Q13 手搓 vs 框架三痛点 + 「不理解就依赖」判断信号 + 核心手写周边借用；Q15 反思闭环两关键设计 + 两粒度 + 互评去「自洽」偏见；Q17 上下文工程四层组成 + 装配流水线 + 注入防护 + Token 预算降载序 + 概念边界；Q18 状态四类信息 + 字段设计 + 状态机/模型分工 + checkpoint 恢复 + 幂等；Q19 四层评测体系 + 评测集四来源 + LLM-as-Judge 偏差治理 + 安全硬门禁 + Badcase 回流；Q20 无进展循环检测四信号 + 治理四步；Q21 TTFT/关键路径/六类瓶颈/优化验证护栏
   - 06.1 待补充清单更新：89 题进度 18/89
+- **循环15（已完成 · 任务4 批次三）**：Agent 面试题批次三 8 篇（题 12/14/16/22/23/24/25/26）→ 五段式加工：
+  - 06.1 新增**模块九：Agent 面试题库精解（第三批：记忆压缩·规划·协作·容错·任务幻觉·数据库安全·Harness）**——Q12 压缩四法对比 + 阈值公式 + Prompt Caching 互补定位；Q14 CoT/ToT/GoT 演进与成本 + Plan-and-Execute/Re-planner；Q16 消息传递 vs 共享状态 + 静态/动态路由 + Handoff 防循环；Q22 通信层 vs 一致性层容错分层（fencing token 防僵尸/Integrator 最终提交权/Git 发现不了语义冲突）；Q23 三类幻觉区分 + 六态状态机 + 证据链 + 故障注入评测；Q24 租户隔离三层纵深 + AST Allowlist + 写操作两阶段审批 + 数据库文本即注入面；Q25 Harness 本质（运行停止≠任务完成/上下文 vs 任务状态分离）；Q26 五模块设计表 + 工具结果三态 + 对抗「改断言」
+  - 06.1 待补充清单更新：89 题进度 26/89
 
 ## 五、全量完成度总览
 
@@ -114,7 +117,7 @@
 | 域2 后端技术组件工程化 | 3（02.1~02.3） | ✅ |
 | 域3 分布式与高可用架构 | 3（03.1~03.3） | ✅ || 域4 工程交付与云原生 | 1（04.1，AI 原生方向） | ✅ 首发；传统 CI/CD·Docker·K8s 待扩充 |
 | 域5 生产运维与可观测性 | 2（05.1 + 05.2） | ✅ 监控三支柱已补全 |
-| 域6 性能优化与架构演进 | 1（06.1，六模块） | ✅ |
+| 域6 性能优化与架构演进 | 1（06.1，九模块） | ✅ |
 | 域7 业务场景与实战案例 | 1（07.1，七模块） | ✅ 三大业务项目深挖完成 |
 
 **后续扩充方向**（非本轮范围）：传统云原生（Docker/K8s/CI-CD）、Prometheus 多集群长期存储（Thanos/Cortex）与 SLO 错误预算、OpenTelemetry 规范、javaguide 分布式/微服务 P1 篇目、设计模式专题其余篇目（javaup sitemap 已定位 URL，待抓取）、nageoffer 牛券/12306/Link GitHub 源码级走读与 Ragent 源码级拆解、xiaolinnote 89 题逐题精解。
