@@ -33,7 +33,7 @@
 | 域3 | [03.2 微服务架构工程化](03-distributed/03.2-microservices.md) | javaguide/microservices | ✅ |
 | 域3 | [03.3 高并发方案设计精选](03-distributed/03.3-solution-design.md) | javaup/solution-design（秒杀库存 + 雪崩防护） | ✅（循环11） |
 | 域6 性能优化与架构演进 | [06.1 AI 前沿：Agent/RAG/LLM/AI编程](06-performance-ai/06.1-ai-frontier.md) | xiaolinnote 89题 + 图解Agent/RAG万字图解 + ReAct/Multi-Agent + ClaudeCode/Codex | ✅ |
-| 域7 业务场景与实战案例 | [07.1 实战项目案例库](07-business-cases/07.1-projects.md) | nageoffer 5项目 | ✅ |
+| 域7 业务场景与实战案例 | [07.1 实战项目案例库](07-business-cases/07.1-projects.md) | nageoffer 5项目（Ragent/oneThread/oneCoupon/12306/shortlink + 12306技术文档3篇） | ✅（循环12 深挖） |
 | 域4 工程交付与云原生 | [04.1 AI 原生研发与 Coding Agent 工程化](04-delivery-cloudnative/04.1-ai-native-delivery.md) | xiaolinnote 图解ClaudeCode/Codex + oneThread | ✅（首发） |
 | 域5 生产运维与可观测性 | [05.1 生产运维与线上排查实战](05-ops-observability/05.1-troubleshooting.md) | javaguide 线上问题排查 + JDK工具总结 | ✅（首发） |
 | 域5 | [05.2 可观测性三支柱深度](05-ops-observability/05.2-observability.md) | javaup 可观测性体系/SkyWalking 源码1-3/分布式日志/系统性能监控 | ✅（循环10） |
@@ -94,6 +94,11 @@
   - 01.3 新增**模块八：Synchronized 锁升级与 JIT 锁优化**（Mark Word 四态/单向升级/偏向锁 JDK15 废弃史/锁消除粗化/无降级真相）
   - 02.3 新增**模块六：SpringBoot 自动配置原理**（ImportSelector 链/imports 文件演变与云原生动机/条件装配/覆盖与排除/自定义 starter）——**解决循环4 以来"javaguide SpringBoot 付费页"历史遗留**
   - **新建 03.3 高并发方案设计精选**（秒杀五层过滤+热点三板斧+扣减方案矩阵；雪崩传导链+防护四层矩阵+Chaos Engineering）
+- **循环12（已完成 · 任务3：nageoffer 项目深挖）**：新增抓取 6 篇（牛券 oneCoupon 介绍页含 34 小节完整课程结构 / 12306 介绍页 / SaaS 短链介绍页 / 12306 技术文档三篇：分布式 ID、线程池 Builder、责任链；GitHub 双开源仓库 README 佐证源码结构）→ 五段式加工：
+  - 07.1 新增**模块五：牛券 oneCoupon 深挖**（十万 QPS 定位/最小必要技术理念/34 小节课程地图/防重三层与 Starter 抽象路径/兑换 vs 秒杀/分库分表 vs 分布式数据库三论点）
+  - 07.1 新增**模块六：12306 深挖**（座位分配五步优先级阶梯/区间三段扣减模型/ES vs Redis 组装误区/读扩散治理/雪花算法 Redis+Lua 动态分配标识位/Builder 线程池/责任链两类型与 MyBatis Interceptor）
+  - 07.1 新增**模块七：Link SaaS 短链深挖**（五步原理链/短码四策略对比/SaaS 五挑战架构应答表/冷热分层/多租户隔离/PTS 压测 12k TPS·56k QPS/301 vs 302 裁决）
+  - 07.1 待补充清单四项全部清零（牛券课程拆解/12306 算法/Link 架构/12306 技术文档）
 
 ## 五、全量完成度总览
 
@@ -104,6 +109,6 @@
 | 域3 分布式与高可用架构 | 3（03.1~03.3） | ✅ || 域4 工程交付与云原生 | 1（04.1，AI 原生方向） | ✅ 首发；传统 CI/CD·Docker·K8s 待扩充 |
 | 域5 生产运维与可观测性 | 2（05.1 + 05.2） | ✅ 监控三支柱已补全 |
 | 域6 性能优化与架构演进 | 1（06.1，六模块） | ✅ |
-| 域7 业务场景与实战案例 | 1（07.1） | ✅ |
+| 域7 业务场景与实战案例 | 1（07.1，七模块） | ✅ 三大业务项目深挖完成 |
 
-**后续扩充方向**（非本轮范围）：传统云原生（Docker/K8s/CI-CD）、Prometheus 多集群长期存储（Thanos/Cortex）与 SLO 错误预算、OpenTelemetry 规范、javaguide 分布式/微服务 P1 篇目、设计模式专题（javaup sitemap 已定位 URL，待抓取）。
+**后续扩充方向**（非本轮范围）：传统云原生（Docker/K8s/CI-CD）、Prometheus 多集群长期存储（Thanos/Cortex）与 SLO 错误预算、OpenTelemetry 规范、javaguide 分布式/微服务 P1 篇目、设计模式专题其余篇目（javaup sitemap 已定位 URL，待抓取）、nageoffer 牛券/12306/Link GitHub 源码级走读与 Ragent 源码级拆解、xiaolinnote 89 题逐题精解。

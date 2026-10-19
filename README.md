@@ -64,7 +64,7 @@ Java-Engineering-Knowledge/
 | javaguide.cn | ✅ 13/13 板块 | ✅ 17 篇（P0 8 + 并发中/下 + Spring + MyBatis + JVM垃圾回收 + Redis数据结构 + OS面试题上 + 网络面试题上 + 线上排查 + JDK工具）+ 五段式加工（01.1~01.6、02.1~02.3、03.1~03.2、05.1） | ✅ 循环1~9 完成 |
 | javaup.chat | ✅ sitemap 全站 888 URL（hub 页 403 已绕过） | ✅ 8 篇（HashMap/ConcurrentHashMap + 可观测性6篇）+ 五段式加工（01.2/01.3/05.2/01.7/02.3/03.3） | 进行中 |
 | xiaolincoding.com | ✅ 图解网络/系统/MySQL/Redis + 24套面试题 | ✅ 21 篇（+TCP可靠性/虚拟内存/过期淘汰）+ 五段式加工（01.5/01.6/02.1/02.2） | ✅ 循环1~9 完成 |
-| nageoffer.com | ✅ 5 个项目卡片 | ✅ Ragent V2 + oneThread 项目介绍 + 五项目五段式加工（07.1） | ✅ 循环1~9 完成 |
+| nageoffer.com | ✅ 5 个项目卡片 | ✅ Ragent V2 + oneThread + 牛券/12306/Link 三大项目深挖 + 12306 技术文档 3 篇 + 五段式加工（07.1） | ✅ 循环1~12 完成 |
 | xiaolinnote.com | ✅ Agent/RAG/LLM/AI编程 89 题 | ✅ 89 题 + 图解Agent/RAG万字图解 + ReAct/Multi-Agent + ClaudeCode/Codex 目录，五段式加工（06.1/04.1） | ✅ 循环1~9 完成 |
 
 ### 已完成文件清单（sources/）
@@ -137,7 +137,14 @@ xiaolincoding/
 nageoffer/
 ├── _index.md                                          # 5 个项目完整卡片（Ragent/oneThread/oneCoupon/12306/SaaS短链）
 ├── ragent-intro.md                                    # Ragent V2 项目介绍（7模块/生产级特性/设计模式）
-└── onethread.md                                       # oneThread动态线程池（配置中心热更/拒绝代理/监控告警/项目结构）
+├── onethread.md                                       # oneThread动态线程池（配置中心热更/拒绝代理/监控告警/项目结构）
+├── onecoupon.md                                       # 牛券oneCoupon（十万QPS/34小节课程地图/七大亮点/分库分表选型）
+├── 12306.md                                           # 12306购票（座位分配算法/分段扣减/三大误区/双版本/100+文档结构）
+├── shortlink.md                                       # SaaS短链Link（五步原理/SaaS五挑战/PTS压测12kTPS/56kQPS）
+└── 12306-tech/                                        # 12306项目文档库·核心技术文档（循环12）
+    ├── distributed-id.md                              # 分布式ID与雪花算法（组成/重复三条件/Redis+Lua动态分配标识位）
+    ├── threadpool-build.md                            # Builder模式创建线程池（参数校验规则/Hutool实现/静态内部类实现）
+    └── chain.md                                       # 责任链模式重构复杂业务（两类型/数据同步校验/MyBatis Interceptor）
 
 xiaolinnote/
 ├── _index.md                                          # Agent/RAG/LLM/AI编程 89 题完整题目清单
@@ -179,7 +186,7 @@ docs/
 ├── 06-performance-ai/
 │   └── 06.1-ai-frontier.md                    # AI前沿（6模块：Agent/RAG题库/工具调用/AI编程/RAG全链路/推理与协作模式）
 ├── 07-business-cases/
-│   └── 07.1-projects.md                       # 实战项目案例库（Ragent V2深挖 + oneThread + 高并发三案例）
+│   └── 07.1-projects.md                       # 实战项目案例库（Ragent V2深挖 + oneThread + 牛券/12306/Link 三大项目五段式深挖）
 ├── 04-delivery-cloudnative/
 │   └── 04.1-ai-native-delivery.md             # AI原生研发与Coding Agent工程化（六件设施/源码级设计/Starter交付范式）
 └── 05-ops-observability/
@@ -187,10 +194,10 @@ docs/
     └── 05.2-observability.md                  # 可观测性三支柱深度（体系分层/Prometheus工程化/分布式日志/SkyWalking源码/性能监控）
 ```
 
-### 状态：循环 1~11 完成 ✅
+### 状态：循环 1~12 完成 ✅
 
-- **sources/** 收集层：68 个 md（63 篇内容 + 5 站点目录），全部带溯源元信息；
+- **sources/** 收集层：74 个 md（69 篇内容 + 5 站点目录），全部带溯源元信息；
 - **docs/** 加工层：19 个 md（18 篇知识域文档 + 索引），七大知识域全部覆盖，统一五段式；
 - **远程仓库**：https://github.com/WilSenwish/Java-Engineering-Knowledge （main 分支；网络抖动时仅保本地）；
-- **循环10/11 解决的历史遗留**：域5 监控三支柱空白、设计模式换源受阻、SpringBoot 付费页空白均已补齐；
-- **后续扩充方向**（非本轮范围）：传统云原生（Docker/K8s/CI-CD）、Prometheus 多集群长期存储与 SLO、OpenTelemetry、javaup 方案设计其余 14 篇、设计模式其余两篇（factory/structural/behavioral）、nageoffer 牛券/12306/Link 项目深挖、xiaolinnote 89 题逐题精解。
+- **循环10~12 解决的历史遗留**：域5 监控三支柱空白、设计模式换源受阻、SpringBoot 付费页空白、牛券/12306/Link 项目深挖均已补齐；
+- **后续扩充方向**（非本轮范围）：传统云原生（Docker/K8s/CI-CD）、Prometheus 多集群长期存储与 SLO、OpenTelemetry、javaup 方案设计其余 14 篇、设计模式其余两篇（factory/structural/behavioral）、nageoffer 牛券/12306/Link GitHub 源码级走读、Ragent 源码级拆解、xiaolinnote 89 题逐题精解。
